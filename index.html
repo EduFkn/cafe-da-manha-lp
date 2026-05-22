@@ -77,15 +77,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script>
   tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          serif: ['"Playfair Display"','Georgia','serif'],
-          sans: ['Inter','system-ui','sans-serif'],
+          serif: ['Montserrat','system-ui','sans-serif'],
+          sans: ['Montserrat','system-ui','sans-serif'],
         },
         colors: {
           cream:  '#F4EFE3',
@@ -93,11 +93,11 @@
           ink:    '#1A1F18',
           inkSoft:'#5A6256',
           inkFaint:'#8A8F84',
-          sage:   '#5A6B4E',
-          forest: '#1F2B1C',
-          forestDeep:'#11170F',
-          olive:  '#3C4A33',
-          gold:   '#C8A04B',
+          sage:   '#EA5D1A',
+          forest: '#3A1F0E',
+          forestDeep:'#2A1407',
+          olive:  '#C2632B',
+          gold:   '#FFB546',
           line:   '#E5E0D2',
         },
       }
@@ -110,26 +110,26 @@
   html{scroll-behavior:smooth}
   body{
     margin:0;
-    font-family:'Inter',system-ui,sans-serif;
-    color:#1A1F18;
+    font-family:'Montserrat',system-ui,sans-serif;
+    color:#1F1108;
     background:#F4EFE3;
     -webkit-font-smoothing:antialiased;
   }
-  .serif{font-family:'Playfair Display',Georgia,serif}
-  .serif-i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:400}
+  .serif{font-family:'Montserrat',system-ui,sans-serif;font-style:normal;font-weight:700}
+  .serif-i{font-family:'Montserrat',system-ui,sans-serif;font-style:normal;font-weight:700}
 
   /* Mountain / landscape background */
   .landscape{
     position:relative;
     background:
       linear-gradient(180deg, rgba(244,239,227,0) 0%, rgba(244,239,227,.4) 60%, rgba(244,239,227,1) 100%),
-      linear-gradient(180deg, #d8e0c8 0%, #b8c4a4 40%, #8ea07a 75%, #5a6b4e 100%);
+      linear-gradient(180deg, #F8E1C2 0%, #F0B97E 40%, #DC8442 75%, #A8521F 100%);
   }
   .landscape::before{
     content:'';
     position:absolute; inset:0;
     background-image:
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 600' preserveAspectRatio='none'><defs><filter id='f'><feGaussianBlur stdDeviation='0.6'/></filter></defs><g filter='url(%23f)'><path d='M0 420 Q150 320 290 360 T560 340 T880 380 T1180 330 T1600 380 L1600 600 L0 600 Z' fill='%2390a481' opacity='.85'/><path d='M0 470 Q200 410 380 440 T720 430 T1040 460 T1380 420 T1600 450 L1600 600 L0 600 Z' fill='%23788a64' opacity='.9'/><path d='M0 530 Q220 490 460 510 T820 500 T1180 520 T1600 510 L1600 600 L0 600 Z' fill='%235c6a4f' opacity='.95'/></g></svg>");
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 600' preserveAspectRatio='none'><defs><filter id='f'><feGaussianBlur stdDeviation='0.6'/></filter></defs><g filter='url(%23f)'><path d='M0 420 Q150 320 290 360 T560 340 T880 380 T1180 330 T1600 380 L1600 600 L0 600 Z' fill='%23E29A5C' opacity='.85'/><path d='M0 470 Q200 410 380 440 T720 430 T1040 460 T1380 420 T1600 450 L1600 600 L0 600 Z' fill='%23C57A40' opacity='.9'/><path d='M0 530 Q220 490 460 510 T820 500 T1180 520 T1600 510 L1600 600 L0 600 Z' fill='%23A05826' opacity='.95'/></g></svg>");
     background-size:cover;
     background-position:bottom;
     pointer-events:none;
@@ -140,7 +140,7 @@
     position:absolute; left:0; right:0; bottom:0;
     height:120px;
     background-image:
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' preserveAspectRatio='none'><g stroke='%234a5841' stroke-width='1.2' fill='none' opacity='.7'><path d='M5 120 Q8 80 6 60'/><path d='M14 120 Q16 70 14 40'/><path d='M22 120 Q26 90 28 70'/><path d='M32 120 Q30 75 34 55'/><path d='M42 120 Q46 85 44 60'/><path d='M52 120 Q50 80 54 50'/><path d='M62 120 Q66 90 64 65'/><path d='M72 120 Q70 70 74 45'/><path d='M82 120 Q86 85 88 65'/><path d='M94 120 Q92 75 96 55'/><path d='M104 120 Q108 90 106 65'/><path d='M114 120 Q112 70 116 45'/><path d='M124 120 Q128 85 126 60'/><path d='M134 120 Q132 80 136 55'/><path d='M144 120 Q148 90 146 65'/><path d='M156 120 Q154 75 158 50'/><path d='M166 120 Q170 85 168 60'/><path d='M178 120 Q176 80 180 55'/><path d='M190 120 Q194 90 192 65'/></g></svg>");
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' preserveAspectRatio='none'><g stroke='%234A2810' stroke-width='1.2' fill='none' opacity='.7'><path d='M5 120 Q8 80 6 60'/><path d='M14 120 Q16 70 14 40'/><path d='M22 120 Q26 90 28 70'/><path d='M32 120 Q30 75 34 55'/><path d='M42 120 Q46 85 44 60'/><path d='M52 120 Q50 80 54 50'/><path d='M62 120 Q66 90 64 65'/><path d='M72 120 Q70 70 74 45'/><path d='M82 120 Q86 85 88 65'/><path d='M94 120 Q92 75 96 55'/><path d='M104 120 Q108 90 106 65'/><path d='M114 120 Q112 70 116 45'/><path d='M124 120 Q128 85 126 60'/><path d='M134 120 Q132 80 136 55'/><path d='M144 120 Q148 90 146 65'/><path d='M156 120 Q154 75 158 50'/><path d='M166 120 Q170 85 168 60'/><path d='M178 120 Q176 80 180 55'/><path d='M190 120 Q194 90 192 65'/></g></svg>");
     background-size:200px 120px;
     background-repeat:repeat-x;
     background-position:bottom;
@@ -167,12 +167,18 @@
 
   /* pill nav buttons */
   .pill{
-    background:#11170F;
+    background:#2A1407;
     color:#fff;
     border-radius:9999px;
     transition: transform .2s, background .2s;
   }
-  .pill:hover{background:#1F2B1C; transform:translateY(-1px)}
+  .pill:hover{background:#3A1F0E; transform:translateY(-1px)}
+
+  /* gentle pulse around primary CTA so it draws the eye */
+  @keyframes ctaPulse{
+    0%,100%{box-shadow:0 14px 32px -10px rgba(234,93,26,.55), 0 0 0 0 rgba(234,93,26,.45), inset 0 1px 0 rgba(255,255,255,.35);}
+    50%   {box-shadow:0 16px 40px -10px rgba(234,93,26,.70), 0 0 0 10px rgba(234,93,26,0),  inset 0 1px 0 rgba(255,255,255,.35);}
+  }
 
   .pill-ghost{
     background:transparent;
@@ -182,27 +188,32 @@
   }
   .pill-ghost:hover{background:#fff}
 
-  /* CTA primary */
+  /* CTA primary — vibrant orange, glowing */
   .btn-cta{
-    background:#11170F;
+    background:linear-gradient(180deg,#FF7A2A 0%,#EA5D1A 60%,#D24E0F 100%);
     color:#fff;
-    font-weight:600;
+    font-weight:700;
     letter-spacing:.04em;
     border-radius:9999px;
-    transition:background .2s, transform .15s, box-shadow .25s;
-    box-shadow: 0 12px 30px -10px rgba(17,23,15,.45);
+    transition: filter .2s, transform .15s, box-shadow .25s;
+    box-shadow:0 14px 32px -10px rgba(234,93,26,.55), inset 0 1px 0 rgba(255,255,255,.35);
+    animation: ctaPulse 2.6s ease-in-out infinite;
   }
-  .btn-cta:hover{background:#2D3B2A; transform:translateY(-1px)}
+  .btn-cta:hover{filter:brightness(1.06); transform:translateY(-2px); animation-play-state:paused;
+    box-shadow:0 22px 44px -10px rgba(234,93,26,.75), inset 0 1px 0 rgba(255,255,255,.4);}
+  .btn-cta:active{transform:translateY(0); filter:brightness(.96)}
 
-  /* yellow accent CTA for price section */
+  /* warm gold accent CTA for price section — harmonized with orange */
   .btn-gold{
-    background:#C8A04B;
-    color:#11170F;
-    font-weight:700;
+    background:linear-gradient(180deg,#FFCC66 0%,#FFB546 55%,#F09328 100%);
+    color:#2A1407;
+    font-weight:800;
     border-radius:9999px;
-    box-shadow: 0 14px 30px -10px rgba(200,160,75,.55), inset 0 1px 0 rgba(255,255,255,.4);
-    transition: filter .2s, transform .15s;
+    box-shadow: 0 16px 34px -10px rgba(255,150,40,.6), inset 0 1px 0 rgba(255,255,255,.5);
+    transition: filter .2s, transform .15s, box-shadow .25s;
   }
+  .btn-gold:hover{filter:brightness(1.06); transform:translateY(-2px);
+    box-shadow: 0 22px 44px -10px rgba(255,150,40,.8), inset 0 1px 0 rgba(255,255,255,.55);}
   .btn-gold:hover{filter:brightness(1.05); transform:translateY(-1px)}
 
   /* blink */
@@ -213,13 +224,15 @@
   @keyframes bnc{0%,100%{transform:translateY(0)}55%{transform:translateY(7px)}}
   .bounce{animation:bnc 1.8s infinite}
 
-  /* checkbox list bullets */
+  /* checkbox list bullets — vibrant orange for positives */
   .check li{padding-left:34px; position:relative; padding-top:10px; padding-bottom:10px; border-bottom:1px solid #E5E0D2}
   .check li:last-child{border-bottom:0}
   .check li::before{
     content:''; position:absolute; left:1px; top:11px;
     width:22px; height:22px; border-radius:9999px;
-    background:#1F2B1C; color:#fff;
+    background:linear-gradient(135deg,#FF7A2A 0%,#EA5D1A 100%);
+    color:#fff;
+    box-shadow: 0 4px 10px -2px rgba(234,93,26,.45), inset 0 1px 0 rgba(255,255,255,.3);
   }
   .check li::after{
     content:''; position:absolute; left:6px; top:17px;
@@ -274,12 +287,12 @@
  
   <!-- hero text -->
   <div class="relative z-10 max-w-6xl mx-auto px-6 pt-12 sm:pt-16 text-center">
-    <h1 class="serif text-[44px] sm:text-[68px] leading-[1.02] tracking-tight font-medium">
+    <h1 class="serif text-[44px] sm:text-[68px] leading-[1.02] tracking-tight">
       +180 cafés da manhã<br>
-      <span class="serif-i">de nutri</span> <span class="font-semibold">(com sabor)</span>
+      <span class="serif-i">de nutri</span> <span>(com sabor)</span>
     </h1>
     <p class="mt-6 max-w-xl mx-auto text-[15.5px] text-inkSoft leading-relaxed">
-      Receitas de baixas calorias criadas pela nutri Maria Aguiar, com sabor delicioso de verdade.
+      Receitas de baixas calorias criadas pela nutri Aline Souza, com sabor delicioso de verdade.
     </p>
   
   </div>
@@ -310,7 +323,7 @@
             <div class="font-semibold">Nova receita disponível</div>
             <div class="text-inkSoft">Panqueca fit de banana</div>
           </div>
-          <span class="ml-auto h-2 w-2 rounded-full bg-[#3FA85A]"></span>
+          <span class="ml-auto h-2 w-2 rounded-full bg-[#E8A85C]"></span>
         </div>
 
         <div class="glass rounded-2xl px-3.5 py-2.5 flex items-center gap-3">
@@ -319,13 +332,13 @@
           </span>
           <div class="text-[12.5px] leading-tight">
             <div class="font-semibold">Aline Souza, nutri</div>
-            <div class="text-inkSoft">Criou 200+ cafés saudáveis</div>
+            <div class="text-inkSoft">Criou 180+ cafés saudáveis</div>
           </div>
         </div>
 
         <div class="glass rounded-2xl px-3.5 py-2.5 flex items-center gap-3">
           <span class="h-8 w-8 rounded-xl bg-[#EFE7D2] grid place-items-center shrink-0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2" stroke="#3C4A33" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#3C4A33" stroke-width="2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2" stroke="#A04A1A" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#A04A1A" stroke-width="2"/></svg>
           </span>
           <div class="text-[12.5px] leading-tight">
             <div class="font-semibold">Pronto em 10 minutos</div>
@@ -347,21 +360,21 @@
             <svg viewBox="0 0 200 110" class="w-full h-full" fill="none">
               <path d="M10 100 A 90 90 0 0 1 190 100" stroke="#E5E0D2" stroke-width="14" stroke-linecap="round"/>
               <path d="M10 100 A 90 90 0 0 1 130 22" stroke="#C8A04B" stroke-width="14" stroke-linecap="round"/>
-              <path d="M10 100 A 90 90 0 0 1 70 24" stroke="#3C4A33" stroke-width="14" stroke-linecap="round"/>
+              <path d="M10 100 A 90 90 0 0 1 70 24" stroke="#A04A1A" stroke-width="14" stroke-linecap="round"/>
             </svg>
             <div class="absolute inset-0 flex flex-col items-center justify-center pt-2">
-              <div class="serif text-[26px] leading-none font-semibold">350</div>
+              <div class="serif text-[26px] leading-none">350</div>
               <div class="text-[11px] text-inkFaint">kcal máx</div>
             </div>
           </div>
 
           <div class="grid grid-cols-3 gap-2 text-center">
             <div>
-              <div class="text-[12.5px] font-semibold">15min</div>
+              <div class="text-[12.5px] font-semibold">10min</div>
               <div class="text-[10px] text-inkFaint uppercase tracking-wider">tempo</div>
             </div>
             <div>
-              <div class="text-[12.5px] font-semibold text-[#3C4A33]">Proteína</div>
+              <div class="text-[12.5px] font-semibold text-[#C2632B]">Proteína</div>
               <div class="text-[10px] text-inkFaint uppercase tracking-wider">essencial</div>
             </div>
             <div>
@@ -414,19 +427,19 @@
 <section class="bg-paper py-20 sm:py-28">
   <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">o que tem no plano</p>
+      
       <h2 class="serif mt-4 text-[40px] sm:text-[54px] leading-[1.04] tracking-tight">
-        o que você<br><span class="serif-i font-medium">vai encontrar:</span>
+        o que você<br><span class="serif-i">vai encontrar no nosso app:</span>
       </h2>
       <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-md">
-        Receitas saudáveis, saborosas e fáceis. Nada de plano impossível de seguir — só comida boa.
+        Receitas saudáveis, saborosas e fáceis. Nada de plano impossível de seguir, só comida boa!
       </p>
 
       <ul class="check mt-8 text-[15px]">
         <li>Receitas de até <strong>350 calorias</strong></li>
         <li>Com <strong>sabores deliciosos</strong> de verdade</li>
         <li>Com <strong>proteínas e vitaminas</strong> essenciais</li>
-        <li>Prontas em <strong>15 minutos</strong></li>
+        <li>Prontas em <strong>10 minutos</strong></li>
         <li>Com <strong>ingredientes comuns</strong></li>
         <li>Use apenas <strong>liquidificador e frigideira</strong></li>
         <li><strong>Passo a passo</strong> de preparo</li>
@@ -443,11 +456,11 @@
       <!-- floating spec card -->
       <div class="glass-soft absolute -left-0 sm:-left-12 bottom-10 rounded-2xl p-3.5 w-56">
         <div class="text-[11px] uppercase tracking-widest text-inkFaint font-semibold">Sanduíche proteico</div>
-        <div class="serif text-[18px] font-medium mt-1">10min · 180 kcal</div>
+        <div class="serif text-[18px] mt-1">10min · 180 kcal</div>
         <div class="mt-3 flex gap-1.5">
-          <span class="h-1 flex-1 rounded-full bg-[#3C4A33]"></span>
-          <span class="h-1 flex-1 rounded-full bg-[#3C4A33]"></span>
-          <span class="h-1 flex-1 rounded-full bg-[#3C4A33]"></span>
+          <span class="h-1 flex-1 rounded-full bg-[#C2632B]"></span>
+          <span class="h-1 flex-1 rounded-full bg-[#C2632B]"></span>
+          <span class="h-1 flex-1 rounded-full bg-[#C2632B]"></span>
           <span class="h-1 flex-1 rounded-full bg-line"></span>
           <span class="h-1 flex-1 rounded-full bg-line"></span>
         </div>
@@ -467,7 +480,7 @@
   <div class="max-w-6xl mx-auto px-6 text-center">
     <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">um gostinho do plano</p>
     <h2 class="serif mt-4 text-[40px] sm:text-[54px] leading-[1.04] tracking-tight">
-      veja o que você<br><span class="serif-i font-medium">vai aprender:</span>
+      veja o que você<br><span class="serif-i">vai aprender:</span>
     </h2>
   </div>
 
@@ -479,7 +492,7 @@
         <img src="https://assets.unileversolutions.com/recipes-v2/237397.jpg" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Café de frigideira<br>com ovos e frios</h3>
+        <h3 class="serif text-[20px] leading-tight">Café de frigideira<br>com ovos e frios</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">10 minutos · 195 calorias</p>
       </div>
     </article>
@@ -490,7 +503,7 @@
         <img src="https://blog.gsuplementos.com.br/wp-content/uploads/2023/10/Iorgute-com-whey.jpg" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Iogurte proteico<br>com frutas</h3>
+        <h3 class="serif text-[20px] leading-tight">Iogurte proteico<br>com frutas</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">4 ingredientes · 207 calorias</p>
       </div>
     </article>
@@ -501,7 +514,7 @@
         <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80&auto=format&fit=crop" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Panqueca fit<br>de banana</h3>
+        <h3 class="serif text-[20px] leading-tight">Panqueca fit<br>de banana</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">7 minutos · 183 calorias</p>
       </div>
     </article>
@@ -512,7 +525,7 @@
         <img src="https://prodcontent.kitano.com.br/wp-content/uploads/2025/01/SSP_2014-Ometele-de-frios-com-cebolinha-e-salsa-1.jpg" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Omelete de frios<br>tostada</h3>
+        <h3 class="serif text-[20px] leading-tight">Omelete de frios<br>tostada</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">9 minutos · 125 calorias</p>
       </div>
     </article>
@@ -523,7 +536,7 @@
         <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=600&q=80&auto=format&fit=crop" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Salada de frutas<br>digestiva (p/ semana)</h3>
+        <h3 class="serif text-[20px] leading-tight">Salada de frutas<br>digestiva (p/ semana)</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">6 frutas · 120 calorias</p>
       </div>
     </article>
@@ -534,7 +547,7 @@
         <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&q=80&auto=format&fit=crop" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Pão cremoso<br>gratinado</h3>
+        <h3 class="serif text-[20px] leading-tight">Pão cremoso<br>gratinado</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">8 minutos · 170 calorias</p>
       </div>
     </article>
@@ -545,7 +558,7 @@
         <img src="https://etccomunica.com.br/wp-content/uploads/2019/01/desintoxicante2-1170x500.jpg" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Shakes detox<br>saborosos</h3>
+        <h3 class="serif text-[20px] leading-tight">Shakes detox<br>saborosos</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">6 minutos · 120 calorias</p>
       </div>
     </article>
@@ -556,7 +569,7 @@
         <img src="https://www.adrianalauffer.com.br/wp-content/uploads/2020/02/bolo-de-caneca-de-banana-1024x683.png" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Bolo de banana<br>de caneca</h3>
+        <h3 class="serif text-[20px] leading-tight">Bolo de banana<br>de caneca</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">3 ingredientes · 175 calorias</p>
       </div>
     </article>
@@ -567,7 +580,7 @@
         <img src="https://www.uai.com.br/wp-content/uploads/2025/12/sanduiche-_1765198551023.jpg" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Sanduíche proteico<br>de frigideira</h3>
+        <h3 class="serif text-[20px] leading-tight">Sanduíche proteico<br>de frigideira</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">10 minutos · 180 calorias</p>
       </div>
     </article>
@@ -578,7 +591,7 @@
         <img src="https://www.uai.com.br/wp-content/uploads/2025/12/Gemini_Generated_Image_inhwfwinhwfwinhw-1.png" class="img-cover" alt="">
       </div>
       <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight font-semibold">Brownie de frigideira<br>(3 ingredientes)</h3>
+        <h3 class="serif text-[20px] leading-tight">Brownie de frigideira<br>(3 ingredientes)</h3>
         <p class="mt-2 text-[12.5px] uppercase tracking-widest text-inkFaint font-medium">10 minutos · 176 calorias</p>
       </div>
     </article>
@@ -587,9 +600,9 @@
     <article class="rounded-[24px] overflow-hidden bg-forestDeep text-cream relative sm:col-span-2 lg:col-span-2 flex items-center justify-center p-10 min-h-[260px]">
       <div class="text-center">
         <p class="text-[12px] uppercase tracking-[.25em] text-cream/60 font-semibold">e ainda</p>
-        <h3 class="serif mt-3 text-[36px] sm:text-[48px] leading-[1.04] font-medium">
+        <h3 class="serif mt-3 text-[36px] sm:text-[48px] leading-[1.04]">
           + 180 <span class="serif-i">outras</span><br>
-          <span class="font-semibold">opções da nutri!</span>
+          <span>opções da nutri!</span>
         </h3>
         <a href="#price" class="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cream text-forestDeep font-semibold text-[13px] tracking-wider hover:bg-white transition">
           QUERO AS RECEITAS!
@@ -621,7 +634,7 @@
           <span class="h-1.5 w-1.5 rounded-full bg-sage"></span>
           Nutricionista CRN
         </div>
-        <div class="serif text-[18px] mt-1 font-semibold leading-tight">Aline Souza</div>
+        <div class="serif text-[18px] mt-1 leading-tight">Aline Souza</div>
         <div class="text-[12px] text-inkSoft mt-1">Alimentação funcional</div>
       </div>
     </div>
@@ -630,8 +643,8 @@
       <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">cardápio assinado</p>
       <h2 class="serif mt-4 text-[36px] sm:text-[48px] leading-[1.04] tracking-tight">
         Cardápio feito pela<br>
-        <span class="serif-i font-medium">nutricionista</span>
-        <span class="font-semibold">Aline Souza</span>
+        <span class="serif-i">nutricionista</span>
+        <span>Aline Souza</span>
       </h2>
 
       <p class="mt-7 text-inkSoft text-[16.5px] leading-relaxed">
@@ -643,15 +656,15 @@
 
       <div class="mt-8 grid grid-cols-3 gap-3 text-center">
         <div class="rounded-2xl border hairline bg-white py-5">
-          <div class="serif text-[32px] font-semibold leading-none">180+</div>
+          <div class="serif text-[32px] leading-none">180+</div>
           <div class="text-[11px] uppercase tracking-widest text-inkFaint mt-2">receitas</div>
         </div>
         <div class="rounded-2xl border hairline bg-white py-5">
-          <div class="serif text-[32px] font-semibold leading-none">10<span class="text-[18px]">min</span></div>
+          <div class="serif text-[32px] leading-none">10<span class="text-[18px]">min</span></div>
           <div class="text-[11px] uppercase tracking-widest text-inkFaint mt-2">preparo</div>
         </div>
         <div class="rounded-2xl border hairline bg-white py-5">
-          <div class="serif text-[32px] font-semibold leading-none">350<span class="text-[16px]">kcal</span></div>
+          <div class="serif text-[32px] leading-none">350<span class="text-[16px]">kcal</span></div>
           <div class="text-[11px] uppercase tracking-widest text-inkFaint mt-2">máximo</div>
         </div>
       </div>
@@ -675,8 +688,8 @@
       <p class="text-[12px] uppercase tracking-[.25em] text-gold font-semibold">exclusivo só aqui</p>
       <h2 class="serif mt-4 text-[40px] sm:text-[54px] leading-[1.04] tracking-tight">
         Receba ainda<br>
-        <span class="serif-i font-medium">+ 3 bônus</span>
-        <span class="font-semibold">exclusivos:</span>
+        <span class="serif-i">+ 3 bônus</span>
+        <span>exclusivos:</span>
       </h2>
     </div>
 
@@ -688,10 +701,10 @@
           <img src="https://i.ytimg.com/vi/QPHXBPjH1J4/maxresdefault.jpg" class="img-cover" alt="">
         </div>
         <div class="text-[11px] uppercase tracking-[.25em] text-gold font-semibold">Bônus 1</div>
-        <h3 class="serif mt-2 text-[24px] leading-tight">190 sobremesas<br><span class="font-semibold">zero açúcar</span></h3>
+        <h3 class="serif mt-2 text-[24px] leading-tight">190 sobremesas<br><span>zero açúcar</span></h3>
         <div class="mt-4 flex items-baseline gap-2">
           <span class="strike text-cream/50 text-[15px]">R$ 29,00</span>
-          <span class="text-[#9DD17A] font-semibold tracking-wide text-[13px]">HOJE É GRÁTIS!</span>
+          <span class="text-[#FFC857] font-semibold tracking-wide text-[13px]">HOJE É GRÁTIS!</span>
         </div>
       </article>
 
@@ -701,10 +714,10 @@
           <img src="https://i.ytimg.com/vi/4uj6H-lw_Cc/maxresdefault.jpg" class="img-cover" alt="">
         </div>
         <div class="text-[11px] uppercase tracking-[.25em] text-gold font-semibold">Bônus 2</div>
-        <h3 class="serif mt-2 text-[24px] leading-tight">30 marmitas fit<br><span class="font-semibold">p/ congelar</span></h3>
+        <h3 class="serif mt-2 text-[24px] leading-tight">30 marmitas fit<br><span>p/ congelar</span></h3>
         <div class="mt-4 flex items-baseline gap-2">
           <span class="strike text-cream/50 text-[15px]">R$ 15,00</span>
-          <span class="text-[#9DD17A] font-semibold tracking-wide text-[13px]">HOJE É GRÁTIS!</span>
+          <span class="text-[#FFC857] font-semibold tracking-wide text-[13px]">HOJE É GRÁTIS!</span>
         </div>
       </article>
 
@@ -714,10 +727,10 @@
           <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80&auto=format&fit=crop" class="img-cover" alt="">
         </div>
         <div class="text-[11px] uppercase tracking-[.25em] text-gold font-semibold">Bônus 3</div>
-        <h3 class="serif mt-2 text-[24px] leading-tight"><span class="font-semibold">60 sucos detox</span></h3>
+        <h3 class="serif mt-2 text-[24px] leading-tight"><span>60 sucos detox</span></h3>
         <div class="mt-4 flex items-baseline gap-2">
           <span class="strike text-cream/50 text-[15px]">R$ 29,00</span>
-          <span class="text-[#9DD17A] font-semibold tracking-wide text-[13px]">HOJE É GRÁTIS!</span>
+          <span class="text-[#FFC857] font-semibold tracking-wide text-[13px]">HOJE É GRÁTIS!</span>
         </div>
       </article>
     </div>
@@ -751,25 +764,22 @@
     </div>
 
     <!-- vantagens -->
-    <div class="rounded-[28px] bg-forestDeep text-cream p-7 sm:p-9 relative overflow-hidden">
+    <div class="rounded-[28px] bg-forestDeep text-cream p-8 py-12 sm:p-9 relative overflow-hidden">
       <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-gold/15 blur-2xl"></div>
      
       <h3 class="serif mt-3 text-[28px] sm:text-[34px] leading-tight relative">
-        Veja as <span class="serif-i font-semibold">vantagens</span>
+        Veja as <span class="serif-i">vantagens</span>
       </h3>
-      <ul class="mt-6 space-y-3 text-[14.5px] relative">
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cardápio criado por uma nutricionista</li>
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mais de 200 opções saudáveis</li>
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Baixíssimas em calorias</li>
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sabor novo todos os dias sem enjoar</li>
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Feitas em menos de 15 minutos</li>
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Não precisa de utensílios profissionais</li>
-        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#9DD17A"/><path d="M7 12.5l3 3 7-7" stroke="#11170F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Nutrição completa pra começar o dia</li>
+      <ul class="mt-6 space-y-8 text-[14.5px] relative">
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cardápio criado por uma nutricionista</li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mais de 180 opções saudáveis</li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Baixíssimas em calorias</li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sabor novo todos os dias sem enjoar</li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Feitas em menos de 10 minutos</li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Não precisa de utensílios profissionais</li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EA5D1A"/><path d="M7 12.5l3 3 7-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Nutrição completa pra começar o dia</li>
       </ul>
-      <a href="#price" class="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-forestDeep font-bold text-[13px] tracking-wider hover:brightness-105 transition">
-        QUERO AS RECEITAS!
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+     
     </div>
   </div>
 </section>
@@ -780,8 +790,8 @@
     <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">prova social</p>
     <h2 class="serif mt-4 text-[40px] sm:text-[54px] leading-[1.04] tracking-tight">
       Veja o que diz<br>
-      <span class="serif-i font-medium">quem</span>
-      <span class="font-semibold">adquiriu:</span>
+      <span class="serif-i">quem</span>
+      <span>adquiriu:</span>
     </h2>
   </div>
 
@@ -901,7 +911,7 @@
     <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">acesso vitalício</p>
 
     <h2 class="serif mt-4 text-[36px] sm:text-[48px] leading-[1.04] tracking-tight">
-      <span class="font-semibold">200 cafés da manhã<br>de nutri</span>
+      <span>200 cafés da manhã<br>de nutri</span>
       <span class="serif-i">(com sabor)</span><span class="align-top text-[16px] ml-1">®</span>
     </h2>
 
@@ -931,7 +941,7 @@
 
       <div class="flex items-start justify-center gap-2">
         
-        <span class="serif text-[112px] sm:text-[140px] font-semibold leading-none tracking-tighter text-gold">29<span class="text-[44px] sm:text-[54px]">,90</span></span>
+        <span class="serif text-[112px] sm:text-[140px] leading-none tracking-tighter text-gold">29<span class="text-[44px] sm:text-[54px]">, 90</span></span>
       </div>
 
       <p class="text-[14.5px] mt-2 text-cream/80">
@@ -967,17 +977,17 @@
       <div class="shrink-0">
         <div class="h-24 w-24 rounded-full bg-[#EFE7D2] grid place-items-center relative">
           <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
-            <path d="M32 4l24 10v18c0 14-10 24-24 28C18 56 8 46 8 32V14L32 4z" fill="#3C4A33" fill-opacity=".15" stroke="#3C4A33" stroke-width="2"/>
-            <text x="50%" y="35%" text-anchor="middle" dominant-baseline="middle" font-family="Playfair Display" font-weight="700" font-size="24" fill="#1F2B1C">14</text>
-            <text x="50%" y="65%" text-anchor="middle" dominant-baseline="middle" font-family="Inter" font-size="10" letter-spacing="1.5" fill="#1F2B1C">DIAS</text>
+            <path d="M32 4l24 10v18c0 14-10 24-24 28C18 56 8 46 8 32V14L32 4z" fill="#3C4A33" fill-opacity=".15" stroke="#A04A1A" stroke-width="2"/>
+            <text x="50%" y="35%" text-anchor="middle" dominant-baseline="middle" font-family="Montserrat" font-weight="700" font-size="24" fill="#3A1F0E">14</text>
+            <text x="50%" y="65%" text-anchor="middle" dominant-baseline="middle" font-family="Montserrat" font-size="10" letter-spacing="1.5" fill="#3A1F0E">DIAS</text>
           </svg>
         </div>
       </div>
       <div>
         <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">garantia incondicional</p>
-        <h3 class="serif mt-2 text-[24px] sm:text-[28px] leading-tight font-semibold">
+        <h3 class="serif mt-2 text-[24px] sm:text-[28px] leading-tight">
           Devolvemos seu dinheiro<br>
-          <span class="serif-i font-normal">e você fica com o produto!</span>
+          <span class="serif-i">e você fica com o produto!</span>
         </h3>
         <p class="mt-4 text-inkSoft text-[15px] leading-relaxed">
           <strong class="text-ink">Essa é nossa garantia:</strong> teste por 14 dias e se não gostar, devolvemos seu dinheiro na hora e você ainda fica com o produto!
@@ -995,8 +1005,8 @@
       <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">entrega imediata</p>
       <h2 class="serif mt-4 text-[36px] sm:text-[44px] leading-[1.04] tracking-tight">
         Como irei<br>
-        <span class="serif-i font-medium">receber</span>
-        <span class="font-semibold">as receitas?</span>
+        <span class="serif-i">receber</span>
+        <span>as receitas?</span>
       </h2>
 
       <ul class="check mt-8 text-[15px]">
@@ -1020,7 +1030,7 @@
     <div class="text-center">
       <p class="text-[12px] uppercase tracking-[.25em] text-sage font-semibold">tire suas dúvidas</p>
       <h2 class="serif mt-3 text-[36px] sm:text-[44px] leading-[1.04] tracking-tight">
-        <span class="serif-i font-medium">Dúvidas</span> <span class="font-semibold">frequentes</span>
+        <span class="serif-i">Dúvidas</span> <span>frequentes</span>
       </h2>
     </div>
 
@@ -1105,13 +1115,13 @@
   <div class="max-w-3xl mx-auto px-6 text-center">
     <h2 class="serif text-[36px] sm:text-[52px] leading-[1.04] tracking-tight">
       Comece <span class="serif-i">amanhã de manhã</span><br>
-      <span class="font-semibold">com sabor de verdade.</span>
+      <span>com sabor de verdade.</span>
     </h2>
     <a href="#price" class="btn-gold mt-8 inline-flex items-center gap-2 px-7 py-4 text-[14px]">
-      QUERO AS RECEITAS POR R$ 29,90
+      QUERO MEU APP DE RECEITAS POR R$ 29,90
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <p class="mt-5 text-[12px] text-cream/60 tracking-wider">Pagamento único · Acesso vitalício · 7 dias de garantia</p>
+    <p class="mt-5 text-[12px] text-cream/60 tracking-wider">Pagamento único · Acesso vitalício · 14 dias de garantia</p>
   </div>
 </section>
 
