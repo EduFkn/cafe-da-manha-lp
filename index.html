@@ -12,6 +12,75 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
 </script>
+
+<script>
+  window.pixelId = "6a0ca8419a73e959243bb614";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<!-- PERSISTÊNCIA DE PARÂMETROS -->
+<script>
+(function () {
+  const params = [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_content',
+    'utm_term',
+    'src',
+    'sck',
+    'fbclid',
+    'ttclid',
+    'gclid',
+    'xcod'
+  ];
+
+  const url = new URL(window.location.href);
+
+  // salva parâmetros
+  params.forEach(param => {
+    const value = url.searchParams.get(param);
+
+    if (value) {
+      localStorage.setItem(param, value);
+    }
+  });
+
+  // adiciona parâmetros em TODOS os links
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+
+      try {
+
+        const linkUrl = new URL(link.href);
+
+        params.forEach(param => {
+
+          const saved = localStorage.getItem(param);
+
+          if (saved && !linkUrl.searchParams.get(param)) {
+            linkUrl.searchParams.set(param, saved);
+          }
+
+        });
+
+        link.href = linkUrl.toString();
+
+      } catch (e) {}
+
+    });
+
+  });
+})();
+</script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
