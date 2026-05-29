@@ -256,6 +256,56 @@
       line-height:1.55 !important;
     }
   }
+
+  section h1,
+  section h2{
+    font-size:32px !important;
+    line-height:1.08 !important;
+  }
+  section h1 + p,
+  section h2 + p{
+    font-size:14px !important;
+    line-height:1.55 !important;
+  }
+  @media(max-width: 639px){
+    section h1,
+    section h2{
+      width:99% !important;
+      max-width:99% !important;
+    }
+    section h1 + p,
+    section h2 + p{
+      width:99% !important;
+      max-width:99% !important;
+    }
+
+    section > div[class*="max-w-"]{
+      width:98% !important;
+      max-width:98% !important;
+      padding-left:.5rem !important;
+      padding-right:.5rem !important;
+    }
+    section .glass-soft,
+    section .recipe-card,
+    section li.bg-white,
+    section article.bg-white,
+    section .rounded-\[28px\],
+    section .rounded-\[32px\]{
+      width:100%;
+      max-width:100%;
+    }
+    .h-scroll{
+      padding-left:.5rem !important;
+      padding-right:.5rem !important;
+      scroll-padding-inline:.5rem !important;
+    }
+    .h-scroll .fbp-card{
+      width:98vw !important;
+      max-width:98vw !important;
+    }
+    .car-arrow.prev{left:2px !important;}
+    .car-arrow.next{right:2px !important;}
+  }
 </style>
 </head>
 
@@ -264,10 +314,10 @@
 <section class="landscape relative overflow-hidden ">
 
   <div class="relative bg-cream border-y hairline z-10 max-w-6xl mx-auto px-6 pt-16 sm:pt-20 text-center">
-    <h1 class="serif text-[38px] sm:text-[56px] lg:text-[62px] leading-[1.05] tracking-tight mx-auto max-w-4xl text-ink">
+    <h1 class="serif text-[32px] sm:text-[32px] lg:text-[62px] leading-[1.05] tracking-tight mx-auto w-full text-ink">
       Use a Festa Junina pra fazer até <span class="serif-i">R$1.000 por semana</span> na cozinha da sua casa
     </h1>
-    <p class="mt-6 bg-cream -mb-6 max-w-2xl mx-auto text-[16px] sm:text-[18px] text-inkSoft leading-relaxed font-medium">
+    <p class="mt-6 bg-cream -mb-6 max-w-2xl mx-auto text-[14px] sm:text-[14px] text-inkSoft leading-relaxed font-medium">
       Você recebe as receitas, o preço já calculado e as mensagens prontas pra vender por encomenda no WhatsApp. Sem experiência, sem gastar muito e sem cozinhar antes de ter o pedido na mão.
     </p>
   </div>
@@ -284,7 +334,7 @@
     
 
       <div class="mx-auto text-center mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-        <a href="#price" class="btn-cta inline-flex items-center gap-2 px-8 py-4 text-[14px] w-full sm:w-auto justify-center">
+        <a href="#price" class="btn-cta inline-flex items-center gap-2 px-6 py-4 text-[14px] w-full sm:w-auto justify-center">
           QUERO COMEÇAR A VENDER
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -461,12 +511,13 @@
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
               </div>
             </div>
-            <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+            <div class="fbp-c">
+              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 4 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Cíntia, esse é o caminho: primeiro valida o pedido, depois você cozinha com mais segurança.</div>
+                <div class="fbp-head"><span class="fbp-name">Sueli Nascimento</span><span class="fbp-meta">· 4 h</span></div>
+                <div class="fbp-text">Eu também travava no mercado. Só de saber o que comprar depois do pedido já dá outra segurança.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+                <div class="fbp-expert-like" aria-label="Curtido"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></div>
               </div>
             </div>
             <div class="fbp-c">
@@ -480,7 +531,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário...</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -519,7 +570,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário...</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
       </div>
@@ -643,7 +694,6 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="h-scroll">
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>203</span>
@@ -660,12 +710,13 @@
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
               </div>
             </div>
-            <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+            <div class="fbp-c">
+              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 6 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Marina, é isso. Preço certo + encomenda antes de produzir. Agora você para de trabalhar no escuro.</div>
+                <div class="fbp-head"><span class="fbp-name">Patrícia Moura</span><span class="fbp-meta">· 6 h</span></div>
+                <div class="fbp-text">Esse negócio do preço é real. Eu sempre esquecia embalagem e achava que estava lucrando.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+                <div class="fbp-expert-like" aria-label="Curtido"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></div>
               </div>
             </div>
             <div class="fbp-c">
@@ -679,7 +730,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -718,7 +769,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -747,7 +798,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=5" alt="">
+              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aparecida Lopes</span><span class="fbp-meta">· 1 d</span></div>
                 <div class="fbp-text">Tenho 58 anos e achei que não ia conseguir mexer no celular. As receitas no PDF abrem tudo, dá pra imprimir e levar pra cozinha.</div>
@@ -757,7 +808,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -796,7 +847,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -895,10 +946,7 @@
       <div class="aspect-[3/4] rounded-[28px] overflow-hidden shadow-xl img-bg">
         <img src="./assets/junina/expert-img.webp" class="img-cover" alt="Aline Souza">
       </div>
-      <div class="glass-soft absolute -right-2 sm:-right-8 bottom-8 rounded-2xl px-5 py-4 w-60">
-        <div class="serif text-[18px] mt-1 leading-tight text-ink">Aline Souza</div>
-        <div class="text-[13px] text-inkSoft mt-1 font-medium">Criadora do Método Junino</div>
-      </div>
+     
     </div>
 
     <div class="lg:col-span-7">
@@ -974,12 +1022,13 @@
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
               </div>
             </div>
-            <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+            <div class="fbp-c">
+              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 1 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Renata, esse é o ponto. Não é fazer tudo. É escolher uma coisa, colocar preço e abrir encomenda.</div>
+                <div class="fbp-head"><span class="fbp-name">Elaine Costa</span><span class="fbp-meta">· 1 h</span></div>
+                <div class="fbp-text">Também sou dessas que salvava tudo e nunca começava. O que me ajudou foi escolher uma receita só.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+                <div class="fbp-expert-like" aria-label="Curtido"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></div>
               </div>
             </div>
             <div class="fbp-c">
@@ -993,7 +1042,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -1032,7 +1081,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -1071,7 +1120,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -1110,7 +1159,7 @@
           </div>
           <div class="fbp-input">
             <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Escreva um comentário…</div>
+            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
           </div>
         </article>
 
@@ -1362,41 +1411,374 @@
 
   .fbp-section { font-family: 'Montserrat', system-ui, sans-serif; }
   .fbp-card {
-    background: #1C1E21; color: #E4E6EB; border-radius: 14px;
-    border: 1px solid #2F3133; box-shadow: 0 14px 40px -18px rgba(0,0,0,.45);
-    font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    overflow: hidden; display: flex; flex-direction: column; text-align: left;
+    background: #242526;
+    color: #E4E6EB;
+    border-radius: 18px;
+    border: 1px solid #3A3B3C;
+    box-shadow: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
-  .fbp-top { display: flex; align-items: center; gap: 18px; padding: 12px 14px 10px; color: #B0B3B8; font-size: 14px; font-weight: 600; border-bottom: 1px solid #2F3133; }
-  .fbp-top-item { display: inline-flex; align-items: center; gap: 6px; }
-  .fbp-top-item.likes svg { color: #2D88FF; fill: #2D88FF; }
-  .fbp-top-mythumb { margin-left: auto; width: 28px; height: 28px; border-radius: 50%; background: #2D88FF; display: grid; place-items: center; }
-  .fbp-sort { padding: 10px 14px 8px; color: #B0B3B8; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
-  .fbp-list { padding: 4px 14px 8px; display: flex; flex-direction: column; gap: 6px; }
-  .fbp-c { display: flex; gap: 10px; padding: 8px 0; }
-  .fbp-c.reply { padding-left: 38px; }
-  .fbp-avatar { width: 36px; height: 36px; border-radius: 50%; background: #3A3B3C; flex-shrink: 0; object-fit: cover; display: grid; place-items: center; color: #8A8D91; }
-  .fbp-c.reply .fbp-avatar { width: 28px; height: 28px; }
-  .fbp-body { flex: 1; min-width: 0; }
-  .fbp-head { font-size: 14.5px; color: #E4E6EB; line-height: 1.2; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-  .fbp-name { font-weight: 700; color: #E4E6EB; }
-  .fbp-meta { color: #B0B3B8; font-size: 13px; font-weight: 400; display: inline-flex; align-items: center; gap: 6px; }
-  .fbp-author-tag { color: #2D88FF; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 3px; }
-  .fbp-text { margin-top: 4px; font-size: 14.5px; color: #E4E6EB; line-height: 1.35; word-wrap: break-word; font-family: -apple-system, sans-serif;}
-  .fbp-c.reply .fbp-text { font-size: 14px; }
-  .fbp-actions { margin-top: 6px; display: flex; align-items: center; gap: 14px; font-size: 13px; color: #B0B3B8; font-weight: 600; }
-  .fbp-actions .resp { cursor: pointer; }
+  .fbp-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 42px;
+    padding: 7px 10px 7px;
+    color: #B0B3B8;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #3A3B3C;
+  }
+  .fbp-top-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    line-height: 1;
+  }
+  .fbp-top-item svg { width: 22px; height: 22px; }
+  .fbp-top-item.likes svg { color: #2374E1; fill: #2374E1; }
+  .fbp-top-item:not(.likes)::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    margin-left: 12px;
+    opacity: .9;
+    background: center / 22px 22px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23B0B3B8' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 7l5 5-5 5'/%3E%3Cpath d='M19 12H9.5C5.9 12 3.6 14 3 17.5C4.7 15.4 6.8 14.5 9.5 14.5H19'/%3E%3C/svg%3E");
+  }
+  .fbp-top-mythumb {
+    margin-left: auto;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #2374E1;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,.35);
+  }
+  .fbp-top-mythumb svg { width: 11px; height: 11px; }
+  .fbp-sort {
+    padding: 12px 10px 8px;
+    color: #B0B3B8;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .fbp-list {
+    padding: 2px 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .fbp-c {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 4px 0;
+    position: relative;
+  }
+  .fbp-c.reply {
+    padding-left: 44px;
+    margin-top: -3px;
+  }
+  .fbp-c.reply::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: -18px;
+    width: 29px;
+    height: 34px;
+    border-left: 2px solid #4B4C4F;
+    border-bottom: 2px solid #4B4C4F;
+    border-bottom-left-radius: 10px;
+  }
+  .fbp-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #D8DADF;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: grid;
+    place-items: center;
+    color: #606770;
+  }
+  .fbp-c.reply .fbp-avatar {
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+  }
+  .fbp-body {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fbp-bubble {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    max-width: min(620px, calc(100% - 24px));
+    background: #3A3B3C;
+    border-radius: 18px;
+    padding: 8px 12px 9px;
+    box-shadow: none;
+  }
+  .fbp-head {
+    width: auto;
+    max-width: 100%;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 0 2px;
+    font-size: 11.5px;
+    color: #E4E6EB;
+    line-height: 1.22;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+  .fbp-name {
+    font-weight: 700;
+    color: #E4E6EB;
+  }
+  .fbp-meta { display: none; }
+  .fbp-author-tag {
+    order: -1;
+    flex-basis: 100%;
+    color: #B0B3B8;
+    font-weight: 600;
+    font-size: 10.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .fbp-author-tag svg {
+    width: 11px;
+    height: 11px;
+    color: #B0B3B8;
+  }
+  .fbp-text {
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    margin-top: 0;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    font-size: 12px;
+    color: #E4E6EB;
+    line-height: 1.32;
+    word-wrap: break-word;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  .fbp-c.reply .fbp-text { font-size: 12px; }
+  .fbp-actions {
+    margin-top: 4px;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 4px;
+    font-size: 12px;
+    color: #B0B3B8;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .fbp-actions::before {
+    content: attr(data-time);
+    color: #B0B3B8;
+  }
+  .fbp-actions::after {
+    content: 'Enviar mensagem    Ocultar';
+    color: #2374E1;
+    font-weight: 700;
+  }
+  .fbp-c.reply .fbp-actions::after { content: none; }
+  .fbp-actions .resp {
+    cursor: pointer;
+    color: #B0B3B8;
+    text-decoration: none !important;
+  }
+  .fbp-body.is-liked .fbp-actions .resp:first-of-type { color: #2D88FF; }
   .fbp-actions .resp:hover,
   .fbp-actions .resp:active,
-  .fbp-actions .resp:focus { text-decoration: none; }
-  .fbp-thumb { margin-left: auto; color: #B0B3B8; opacity: .9; cursor: pointer; }
-  .fbp-thumb.liked { color: #2D88FF; }
-  .fbp-input { margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 10px 14px 14px; border-top: 1px solid #2F3133; }
-  .fbp-cam { color: #B0B3B8; flex-shrink: 0; }
-  .fbp-input-pill { flex: 1; background: #3A3B3C; color: #B0B3B8; border-radius: 24px; padding: 9px 14px; font-size: 14px; display: flex; align-items: center; gap: 10px; }
-  .fbp-input-pill .fbp-pill-icons { margin-left: auto; display: inline-flex; align-items: center; gap: 10px; opacity: .9; }
-  .fbp-silhouette { background: #4E4F50; }
-  .fbp-silhouette svg { color: #B0B3B8; }
+  .fbp-actions .resp:focus { text-decoration: none !important; }
+  .fbp-thumb,
+  .fbp-expert-like {
+    width: 19px;
+    height: 19px;
+    border-radius: 999px;
+    background: #2374E1;
+    color: #fff;
+    display: inline-grid;
+    align-items: center;
+    place-items: center;
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,.35);
+  }
+  .fbp-reaction {
+    position: absolute;
+    right: -9px;
+    bottom: -10px;
+    border: 2px solid #242526;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .fbp-reaction::before {
+    content: '1';
+    position: absolute;
+    right: 18px;
+    top: 1px;
+    color: #B0B3B8;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .fbp-thumb svg,
+  .fbp-expert-like svg {
+    width: 10px;
+    height: 10px;
+    color: #fff;
+    fill: #fff;
+  }
+  .fbp-thumb.liked { color: #fff; }
+  .fbp-thumb:not(.fbp-reaction),
+  .fbp-expert-like:not(.fbp-reaction) {
+    margin-left: 0;
+    transform: translateY(-1px);
+  }
+  .fbp-input {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px 12px;
+    border-top: 1px solid transparent;
+  }
+  .fbp-cam {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: center / cover no-repeat url('./assets/junina/expert-img.webp');
+    color: transparent;
+    flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+  }
+  .fbp-cam svg { display: none; }
+  .fbp-cam::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #3A3B3C;
+    border: 1px solid #242526;
+  }
+  .fbp-input-pill {
+    position: relative;
+    flex: 1;
+    min-height: 72px;
+    background: #3A3B3C;
+    color: #B0B3B8;
+    border-radius: 14px;
+    padding: 11px 44px 10px 13px;
+    font-size: 11.5px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.2;
+    min-width: 0;
+  }
+  .fbp-placeholder {
+    color: #B0B3B8;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .fbp-tools {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 18px;
+  }
+  .fbp-tool {
+    width: 17px;
+    height: 17px;
+    color: #B0B3B8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+  .fbp-tool svg {
+    width: 17px;
+    height: 17px;
+    display: block;
+    stroke: currentColor;
+  }
+  .fbp-tool.gif {
+    width: auto;
+    height: 16px;
+    padding: 0 2px;
+    border: 1.5px solid currentColor;
+    border-radius: 4px;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+  .fbp-send {
+    position: absolute;
+    right: 13px;
+    bottom: 10px;
+    width: 22px;
+    height: 22px;
+    color: #8D9095;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fbp-send svg {
+    width: 21px;
+    height: 21px;
+    display: block;
+    fill: currentColor;
+  }
+  .fbp-input-pill .fbp-pill-icons { display: none; }
+  .fbp-silhouette { background: #D8DADF; }
+  .fbp-silhouette svg { color: #606770; }
+  @media(max-width: 639px) {
+    .fbp-card { border-radius: 16px; }
+    .fbp-top { gap: 16px; padding-inline: 9px; }
+    .fbp-top-item svg { width: 21px; height: 21px; }
+    .fbp-top-item:not(.likes)::after { width: 21px; height: 21px; margin-left: 8px; background-size: 21px 21px; }
+    .fbp-list { padding-inline: 9px; }
+    .fbp-avatar { width: 32px; height: 32px; }
+    .fbp-c.reply { padding-left: 40px; }
+    .fbp-bubble { max-width: calc(100% - 18px); border-radius: 17px; }
+    .fbp-actions { gap: 12px; font-size: 11.5px; }
+    .fbp-actions::after { content: 'Enviar mensagem'; }
+    .fbp-input { padding-inline: 10px; }
+    .fbp-input-pill { min-height: 72px; padding-right: 38px; }
+    .fbp-tools { gap: 9px; }
+  }
   .offer-stack span,
   .offer-stack-total span {
     color: #8A8F84;
@@ -1692,6 +2074,52 @@
 </footer>
 
 <script>
+  document.querySelectorAll('.fbp-body').forEach(function(body){
+    var head = body.querySelector('.fbp-head');
+    var text = body.querySelector('.fbp-text');
+    if (head && text && !head.closest('.fbp-bubble')) {
+      var bubble = document.createElement('div');
+      bubble.className = 'fbp-bubble';
+      body.insertBefore(bubble, head);
+      bubble.appendChild(head);
+      bubble.appendChild(text);
+    }
+
+    var bubbleEl = body.querySelector('.fbp-bubble');
+    var actionsEl = body.querySelector('.fbp-actions');
+    var reaction = actionsEl ? actionsEl.querySelector('.fbp-thumb.liked') : null;
+    if (!reaction) reaction = body.querySelector('.fbp-expert-like');
+    if (bubbleEl && reaction) {
+      reaction.classList.add('fbp-reaction');
+      reaction.setAttribute('aria-label', '1 curtida');
+      bubbleEl.appendChild(reaction);
+      body.classList.add('is-liked');
+    }
+  });
+
+  document.querySelectorAll('.fbp-c').forEach(function(comment){
+    var meta = comment.querySelector('.fbp-meta');
+    var actions = comment.querySelector('.fbp-actions');
+    if (!meta || !actions) return;
+    var time = meta.textContent.replace(/[\u00b7\u2022]/g, '').trim();
+    if (time) actions.setAttribute('data-time', time);
+  });
+
+  document.querySelectorAll('.fbp-input-pill').forEach(function(pill){
+    if (pill.querySelector('.fbp-placeholder')) return;
+    pill.innerHTML = [
+      '<span class="fbp-placeholder">Comente como Aline Souza - Receitinhas</span>',
+      '<span class="fbp-tools" aria-hidden="true">',
+        '<span class="fbp-tool"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M8.8 10.2h.01M15.2 10.2h.01M8.8 14.7c1 .9 2.1 1.3 3.2 1.3s2.2-.4 3.2-1.3"></path><path d="M6.2 6.4l2 2M17.8 6.4l-2 2"></path></svg></span>',
+        '<span class="fbp-tool"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M8.8 10h.01M15.2 10h.01M8.8 14.4c1.1 1 2.2 1.5 3.2 1.5s2.1-.5 3.2-1.5"></path></svg></span>',
+        '<span class="fbp-tool"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2A2.2 2.2 0 016.7 6h2.2l1.5-2h3.2l1.5 2h2.2a2.2 2.2 0 012.2 2.2v7.6a2.2 2.2 0 01-2.2 2.2H6.7a2.2 2.2 0 01-2.2-2.2V8.2z"></path><circle cx="12" cy="12.4" r="3.2"></circle></svg></span>',
+        '<span class="fbp-tool gif">GIF</span>',
+        '<span class="fbp-tool"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.5c-3.2.2-5.8-.7-7.5-2.3-1.7 1.6-4.3 2.5-7.5 2.3v5.8c0 4.3 2.9 7 7.5 8.5 4.6-1.5 7.5-4.2 7.5-8.5V5.5z"></path><path d="M8.8 12.2l2 2 4.7-5"></path></svg></span>',
+      '</span>',
+      '<span class="fbp-send" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.4 19.4L20.6 12 4.4 4.6 6 10.3l7.9 1.7L6 13.7l-1.6 5.7z"></path></svg></span>'
+    ].join('');
+  });
+
   document.querySelectorAll('.carousel-wrap').forEach(function(wrap){
     var scroll = wrap.querySelector('.h-scroll');
     var prev = wrap.querySelector('.car-arrow.prev');
