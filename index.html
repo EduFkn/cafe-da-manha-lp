@@ -40,14 +40,17 @@
 
 <style>
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
   body{
     margin:0;
     font-family:'Montserrat',system-ui,sans-serif;
     color:#1F1108;
     background:#F4EFE3;
     -webkit-font-smoothing:antialiased;
+    max-width:100%;
+    overflow-x:hidden;
   }
+  img, svg, video{max-width:100%}
   .serif{font-family:'Montserrat',system-ui,sans-serif;font-style:normal;font-weight:800;letter-spacing:-0.03em;}
   .serif-i{font-family:'Montserrat',system-ui,sans-serif;font-style:normal;font-weight:800;color:#EA5D1A}
 
@@ -225,8 +228,8 @@
     section h1,
     section h2,
     section p.font-bold.leading-tight{
-      width:calc(100vw - 28px) !important;
-      max-width:calc(100vw - 28px) !important;
+      width:100% !important;
+      max-width:100% !important;
       margin-left:auto !important;
       margin-right:auto !important;
       text-align:center !important;
@@ -243,8 +246,8 @@
     section h1 + p,
     section h2 + p,
     section p.font-bold.leading-tight + p{
-      width:98% !important;
-      max-width:98% !important;
+      width:100% !important;
+      max-width:100% !important;
       margin-left:auto !important;
       margin-right:auto !important;
       text-align:center !important;
@@ -576,7 +579,7 @@
           </div>
           <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Pare de torcer pra alguém comprar. São +150 receitas separadas por categoria pra você começar pela que tem saída de verdade no seu bairro, na escola, na igreja ou no WhatsApp.</p>
           <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-receita-saida-natural.png" alt="Mulher escolhendo receitas juninas com ingredientes na mesa" class="img-cover" loading="lazy">
+            <img src="./assets/junina/passo-receita-desejo-br.png" alt="Comidas juninas prontas para vender em uma mesa de cozinha brasileira" class="img-cover" loading="lazy">
           </div>
         </li>
         <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
@@ -586,7 +589,7 @@
           </div>
           <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Chega de trabalhar de graça. O app já te mostra quanto custa produzir e quanto cobrar pra você ter lucro de verdade.</p>
           <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-preco-certo-natural.png" alt="Cálculo de preço de receitas juninas antes de comprar ingredientes" class="img-cover" loading="lazy">
+            <img src="./assets/junina/passo-preco-desejo-br.png" alt="Precificação simples de comidas juninas prontas para vender" class="img-cover" loading="lazy">
           </div>
         </li>
         
@@ -597,7 +600,7 @@
           </div>
           <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Sem parecer insistente e sem se humilhar. Mensagens prontas pra status, grupo e resposta individual: é só copiar, adaptar e mandar.</p>
           <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-whatsapp-sem-vergonha-natural.png" alt="Venda de comida junina pelo WhatsApp sem vergonha de oferecer" class="img-cover" loading="lazy">
+            <img src="./assets/junina/passo-whatsapp-desejo-br.png" alt="Comidas juninas embaladas sendo vendidas pelo WhatsApp" class="img-cover" loading="lazy">
           </div>
         </li>
       
