@@ -5,38 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Método Junino — venda comidas típicas de Festa Junina por encomenda</title>
 
+<script>
+  window.pixelId = "6a0ca8419a73e959243bb614";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
 
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="./assets/site-tailwind.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          serif: ['Montserrat','system-ui','sans-serif'],
-          sans: ['Montserrat','system-ui','sans-serif'],
-        },
-        colors: {
-          cream:  '#F4EFE3',
-          paper:  '#FAF7EE',
-          ink:    '#1A1F18',
-          inkSoft:'#5A6256',
-          inkFaint:'#8A8F84',
-          sage:   '#EA5D1A',
-          forest: '#3A1F0E',
-          forestDeep:'#2A1407',
-          olive:  '#C2632B',
-          gold:   '#FFB546',
-          line:   '#E5E0D2',
-        },
-      }
-    }
-  }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
   *{box-sizing:border-box}
@@ -57,48 +45,23 @@
   /* Mountain / landscape background */
   .landscape{
     position:relative;
-    background:bg-cream;
+    background:#F4EFE3;
   }
 
   /* hairline */
   .hairline{border-color:#E5E0D2}
 
-  /* glass card */
-  .glass{
-    background:rgba(255,255,255,.72);
-    backdrop-filter: blur(14px) saturate(160%);
-    -webkit-backdrop-filter: blur(14px) saturate(160%);
-    border:1px solid rgba(255,255,255,.6);
-    box-shadow: 0 14px 40px -18px rgba(20,40,15,.18), 0 1px 0 rgba(255,255,255,.7) inset;
-  }
   .glass-soft{
     background:rgba(255,255,255,.92);
     border:1px solid #E5E0D2;
     box-shadow: 0 8px 28px -16px rgba(20,40,15,.15);
   }
 
-  /* pill nav buttons */
-  .pill{
-    background:#2A1407;
-    color:#fff;
-    border-radius:9999px;
-    transition: transform .2s, background .2s;
-  }
-  .pill:hover{background:#3A1F0E; transform:translateY(-1px)}
-
   /* gentle pulse around primary CTA so it draws the eye */
   @keyframes ctaPulse{
     0%,100%{box-shadow:0 14px 32px -10px rgba(234,93,26,.55), 0 0 0 0 rgba(234,93,26,.45), inset 0 1px 0 rgba(255,255,255,.35);}
     50%   {box-shadow:0 16px 40px -10px rgba(234,93,26,.70), 0 0 0 10px rgba(234,93,26,0),  inset 0 1px 0 rgba(255,255,255,.35);}
   }
-
-  .pill-ghost{
-    background:transparent;
-    border:1px solid #E5E0D2;
-    border-radius:9999px;
-    transition:background .2s;
-  }
-  .pill-ghost:hover{background:#fff}
 
   /* CTA primary — vibrant orange, glowing */
   .btn-cta{
@@ -126,14 +89,6 @@
   }
   .btn-gold:hover{filter:brightness(1.06); transform:translateY(-2px);
     box-shadow: 0 22px 44px -10px rgba(255,150,40,.8), inset 0 1px 0 rgba(255,255,255,.55);}
-
-  /* blink */
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-  .blink{animation:blink 1.2s infinite}
-
-  /* scroll bounce */
-  @keyframes bnc{0%,100%{transform:translateY(0)}55%{transform:translateY(7px)}}
-  .bounce{animation:bnc 1.8s infinite}
 
   /* checkbox list bullets — vibrant orange for positives */
   .check li{padding-left:34px; position:relative; padding-top:10px; padding-bottom:10px; border-bottom:1px solid #E5E0D2; font-weight:500;}
@@ -190,6 +145,22 @@
   }
   .pain-bullets strong{color:#1A1F18}
 
+  .pain-card{
+    display:flex;
+    flex-direction:column;
+  }
+  .pain-scene{
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:18px;
+  }
+  .pain-scene img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:inherit;
+  }
+
   /* details */
   details > summary{list-style:none; cursor:pointer}
   details > summary::-webkit-details-marker{display:none}
@@ -212,18 +183,8 @@
 
   /* swiper-like marquee */
   @keyframes scrollX{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-  .marquee{animation:scrollX 70s linear infinite}
+  .marquee{animation:scrollX 60s linear infinite}
   
-  /* numbers */
-  .num-chip{
-    width:40px;height:40px;border-radius:50%;
-    background:linear-gradient(180deg, #FF7A2A, #EA5D1A);
-    color:#fff;display:grid;place-items:center;
-    font-weight:800;font-size:16px;
-    box-shadow:0 8px 16px -4px rgba(234,93,26,.5), inset 0 1px 0 rgba(255,255,255,.3);
-    flex-shrink:0;
-  }
-
   @media(max-width: 639px){
     section h1,
     section h2,
@@ -330,7 +291,7 @@
     <div class="relative">
 
       <div class="mx-auto rounded-[18px] overflow-hidden shadow-2xl w-full sm:w-full">
-        <img src="./assets/dashboard.webp" alt="Receitas Festa Junina" class="img-cover" loading="lazy">
+        <img src="./assets/junina/dashboard-fast.webp" alt="Receitas Festa Junina" class="img-cover" loading="lazy" decoding="async" width="1200" height="675">
       </div>
       
     
@@ -356,100 +317,88 @@
   <div class="relative">
     <div class="flex gap-4 marquee w-max">
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/salgados-card.webp" class="img-cover" alt="Pamonha">
+        <img src="./assets/junina/carrossel-pamonha.webp" class="img-cover" alt="Pamonha" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Pamonha</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Clássico que todo mundo procura</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/doces-card.webp" class="img-cover" alt="Canjica">
+        <img src="./assets/junina/carrossel-canjica.webp" class="img-cover" alt="Canjica" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Canjica</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Cremosa, simples e perfeita pra encomenda</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/doces-card.webp" class="img-cover" alt="Curau">
+        <img src="./assets/junina/carrossel-curau.webp" class="img-cover" alt="Curau" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Curau</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Cheiro de milho, infância e São João</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/top-vendidos-card.webp" class="img-cover" alt="Pé de Moleque">
+        <img src="./assets/junina/carrossel-pe-de-moleque.webp" class="img-cover" alt="Pé de Moleque" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Pé de Moleque</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Barato, rápido e fácil de embalar</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/caldos-card.webp" class="img-cover" alt="Caldo Verde">
+        <img src="./assets/junina/carrossel-caldo-verde.webp" class="img-cover" alt="Caldo Verde" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Caldo Verde</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Venda forte nas noites frias</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/bebidas-doces-vara-card.webp" class="img-cover" alt="Maçã do Amor">
+        <img src="./assets/junina/carrossel-maca-do-amor.webp" class="img-cover" alt="Maçã do Amor" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Maçã do Amor</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Compra impulsiva de festa</div>
         </div>
       </article>
 
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/salgados-card.webp" class="img-cover" alt="Pamonha">
+        <img src="./assets/junina/carrossel-pamonha.webp" class="img-cover" alt="Pamonha" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Pamonha</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Clássico que todo mundo procura</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/doces-card.webp" class="img-cover" alt="Canjica">
+        <img src="./assets/junina/carrossel-canjica.webp" class="img-cover" alt="Canjica" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Canjica</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Cremosa, simples e perfeita pra encomenda</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/doces-card.webp" class="img-cover" alt="Curau">
+        <img src="./assets/junina/carrossel-curau.webp" class="img-cover" alt="Curau" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Curau</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Cheiro de milho, infância e São João</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/top-vendidos-card.webp" class="img-cover" alt="Pé de Moleque">
+        <img src="./assets/junina/carrossel-pe-de-moleque.webp" class="img-cover" alt="Pé de Moleque" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Pé de Moleque</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Barato, rápido e fácil de embalar</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/caldos-card.webp" class="img-cover" alt="Caldo Verde">
+        <img src="./assets/junina/carrossel-caldo-verde.webp" class="img-cover" alt="Caldo Verde" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Caldo Verde</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Venda forte nas noites frias</div>
         </div>
       </article>
       <article class="h-44 w-64 sm:h-52 sm:w-72 rounded-2xl relative overflow-hidden shrink-0 border hairline shadow-sm bg-forestDeep">
-        <img src="./assets/junina/bebidas-doces-vara-card.webp" class="img-cover" alt="Maçã do Amor">
+        <img src="./assets/junina/carrossel-maca-do-amor.webp" class="img-cover" alt="Maçã do Amor" loading="lazy" decoding="async" width="640" height="427">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4">
           <div class="font-bold text-white text-[19px] tracking-tight">Maçã do Amor</div>
-          <div class="text-[10.5px] uppercase tracking-[.18em] text-gold mt-1 font-bold">Compra impulsiva de festa</div>
         </div>
       </article>
     </div>
@@ -508,7 +457,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=41" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-cintia-moreira.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Cíntia Moreira</span><span class="fbp-meta">· 5 h</span></div>
                 <div class="fbp-text">Eu sempre desistia na hora de comprar os ingredientes. Quando vi que dava pra abrir encomenda antes, consegui sair do medo e postar meu primeiro cardápio.</div>
@@ -548,7 +497,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=56" alt="">
+              <div class="fbp-avatar fbp-initials fbp-avatar-sage" aria-label="Avatar com iniciais">PA</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Priscila Andrade</span><span class="fbp-meta">· 1 d</span></div>
                 <div class="fbp-text">Eu achava que precisava fazer um monte de canjica pra mostrar que vendia. Agora divulgo primeiro e só compro o que preciso depois dos pedidos.</div>
@@ -556,7 +505,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 22 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">Perfeito, Pri. Produção sem pedido é o que dá medo. Encomenda antes muda tudo.</div>
@@ -564,7 +513,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=31" alt="">
+              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Solange Vieira</span><span class="fbp-meta">· 23 h</span></div>
                 <div class="fbp-text">A parte do preço foi a que destravou. Antes eu colocava qualquer valor e depois ficava com raiva de mim mesma.</div>
@@ -594,20 +543,26 @@
     </div>
 
     <div class="mt-16 grid md:grid-cols-3 gap-6">
-      <div class="glass-soft rounded-[28px] p-8">
-        <div class="num-chip mb-6">1</div>
+      <div class="pain-card glass-soft rounded-[28px] p-8">
         <div class="text-[20px] font-bold leading-tight text-ink">Você tem medo de errar o preço e trabalhar de graça</div>
         <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Porque não adianta vender tudo e, no final, descobrir que o lucro ficou no gás, na embalagem, no leite condensado e no amendoim.</p>
+        <div class="pain-scene">
+          <img src="./assets/junina/dor-preco-anime.webp" alt="Ilustracao em anime adulto sobre calculo de custos para comidas juninas" loading="lazy" decoding="async" width="640" height="360">
+        </div>
       </div>
-      <div class="glass-soft rounded-[28px] p-8">
-        <div class="num-chip mb-6">2</div>
+      <div class="pain-card glass-soft rounded-[28px] p-8">
         <div class="text-[20px] font-bold leading-tight text-ink">Você tem vergonha de cobrar de quem conhece você</div>
         <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Vender pra desconhecido já assusta. Mas vender pra vizinha, mãe da escola, parente e conhecido parece pior ainda.</p>
+        <div class="pain-scene">
+          <img src="./assets/junina/dor-cobranca-anime.webp" alt="Ilustracao em anime adulto sobre cobranca por mensagem para encomendas juninas" loading="lazy" decoding="async" width="640" height="360">
+        </div>
       </div>
-      <div class="glass-soft rounded-[28px] p-8">
-        <div class="num-chip mb-6">3</div>
+      <div class="pain-card glass-soft rounded-[28px] p-8">
         <div class="text-[20px] font-bold leading-tight text-ink">Você tem pavor de fazer comida e ficar com tudo parado</div>
         <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">É por isso que o método não começa mandando você cozinhar um monte. Ele começa pelo mais importante: vender antes de produzir.</p>
+        <div class="pain-scene">
+          <img src="./assets/junina/dor-encalhe-anime.webp" alt="Ilustracao em anime adulto sobre producao junina aguardando encomendas" loading="lazy" decoding="async" width="640" height="360">
+        </div>
       </div>
     </div>
 
@@ -634,7 +589,7 @@
           </div>
           <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Pare de torcer pra alguém comprar. São +150 receitas separadas por categoria pra você começar pela que tem saída de verdade no seu bairro, na escola, na igreja, nas festas juninas ou no WhatsApp.</p>
           <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-receita-desejo-br.png" alt="Comidas juninas prontas para vender em uma mesa de cozinha brasileira" class="img-cover" loading="lazy">
+            <img src="./assets/junina/passo-receita-desejo-br.webp" alt="Comidas juninas prontas para vender em uma mesa de cozinha brasileira" class="img-cover" loading="lazy" decoding="async" width="960" height="541">
           </div>
         </li>
         <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
@@ -644,7 +599,7 @@
           </div>
           <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Chega de trabalhar de graça. O app já te mostra quanto custa produzir e quanto cobrar pra você ter lucro de verdade.</p>
           <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-preco-desejo-br.png" alt="Precificação simples de comidas juninas prontas para vender" class="img-cover" loading="lazy">
+            <img src="./assets/junina/passo-preco-desejo-br.webp" alt="Precificação simples de comidas juninas prontas para vender" class="img-cover" loading="lazy" decoding="async" width="960" height="540">
           </div>
         </li>
         
@@ -655,7 +610,7 @@
           </div>
           <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Sem parecer insistente e sem se humilhar. Mensagens prontas pra status, grupo e resposta individual: é só copiar, adaptar e mandar.</p>
           <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-whatsapp-desejo-br.png" alt="Comidas juninas embaladas sendo vendidas pelo WhatsApp" class="img-cover" loading="lazy">
+            <img src="./assets/junina/passo-whatsapp-desejo-br.webp" alt="Comidas juninas embaladas sendo vendidas pelo WhatsApp" class="img-cover" loading="lazy" decoding="async" width="960" height="540">
           </div>
         </li>
       
@@ -707,7 +662,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=23" alt="">
+              <div class="fbp-avatar fbp-initials fbp-avatar-plum" aria-label="Avatar com iniciais">MS</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Marina Souza</span><span class="fbp-meta">· 8 h</span></div>
                 <div class="fbp-text">Peguei a planilha, precifiquei minha canjica e percebi que eu estava cobrando muito abaixo. Só isso já mudou minha coragem de vender.</div>
@@ -724,7 +679,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=16" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-eliane-barbosa.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Eliane Barbosa</span><span class="fbp-meta">· 7 h</span></div>
                 <div class="fbp-text">Eu tinha vergonha até de postar no status. Usei a mensagem pronta, abri encomenda pra pamonha e meu marido acabou me ajudando a embalar no domingo.</div>
@@ -747,7 +702,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=20" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-rosangela-martins.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Rosângela Martins</span><span class="fbp-meta">· 2 d</span></div>
                 <div class="fbp-text">Consegui vender canjica, bolo de milho e quentão no mesmo fim de semana. O melhor foi receber antes e não ficar com comida parada.</div>
@@ -755,7 +710,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 2 d ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">Rosângela, esse é o jogo: encomenda primeiro, cozinha depois. Menos medo, mais controle.</div>
@@ -786,7 +741,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=49" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-vanessa-oliveira.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Vanessa Oliveira</span><span class="fbp-meta">· 1 d</span></div>
                 <div class="fbp-text">Peguei a planilha, coloquei meus custos e entendi onde eu estava vendendo barato demais. Só isso já tirou um peso enorme.</div>
@@ -794,7 +749,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 22 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">É isso, Vanessa. Clareza no preço muda a forma como você oferece sem pedir desculpa por cobrar.</div>
@@ -825,7 +780,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
+              <div class="fbp-avatar fbp-initials fbp-avatar-plum" aria-label="Avatar com iniciais">SP</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Sandra Pereira</span><span class="fbp-meta">· 11 h</span></div>
                 <div class="fbp-text">Comprei meio sem fé porque eu travava muito pra cobrar parente. As frases prontas me ajudaram a pedir sinal sem parecer grossa.</div>
@@ -833,7 +788,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 9 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">Sandra, pedir sinal com educação muda tudo. Você continua gentil, mas para de carregar o risco sozinha.</div>
@@ -841,7 +796,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=10" alt="">
+              <div class="fbp-avatar fbp-initials fbp-avatar-rose" aria-label="Avatar com iniciais">DR</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Daniela Rocha</span><span class="fbp-meta">· 10 h</span></div>
                 <div class="fbp-text">Postei primeiro no status só pra testar e recebi pedido de duas vizinhas. Foi pouco, mas foi a primeira vez que eu não cozinhei no escuro.</div>
@@ -875,7 +830,7 @@
 
     <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
       <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/doces-card.webp" class="img-cover" alt="Doces" loading="lazy">
+        <img src="./assets/junina/doces-card-fast.webp" class="img-cover" alt="Doces" loading="lazy" decoding="async" width="640" height="427">
       </div>
       <div class="p-5">
         <h3 class="serif text-[20px] leading-tight text-ink">Doces juninos</h3>
@@ -885,7 +840,7 @@
 
     <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
       <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/salgados-card.webp" class="img-cover" alt="Salgados" loading="lazy">
+        <img src="./assets/junina/salgados-card-fast.webp" class="img-cover" alt="Salgados" loading="lazy" decoding="async" width="640" height="427">
       </div>
       <div class="p-5">
         <h3 class="serif text-[20px] leading-tight text-ink">Bolos e receitas de milho</h3>
@@ -895,7 +850,7 @@
 
     <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
       <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/caldos-card.webp" class="img-cover" alt="Caldos" loading="lazy">
+        <img src="./assets/junina/caldos-card-fast.webp" class="img-cover" alt="Caldos" loading="lazy" decoding="async" width="640" height="427">
       </div>
       <div class="p-5">
         <h3 class="serif text-[20px] leading-tight text-ink">Caldos e comidas quentes</h3>
@@ -905,7 +860,7 @@
 
     <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
       <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/bebidas-doces-vara-card.webp" class="img-cover" alt="Bebidas" loading="lazy">
+        <img src="./assets/junina/bebidas-doces-vara-card-fast.webp" class="img-cover" alt="Bebidas" loading="lazy" decoding="async" width="640" height="427">
       </div>
       <div class="p-5">
         <h3 class="serif text-[20px] leading-tight text-ink">Bebidas típicas</h3>
@@ -915,7 +870,7 @@
 
     <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
       <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/top-vendidos-card.webp" class="img-cover" alt="Top 10" loading="lazy">
+        <img src="./assets/junina/top-vendidos-card-fast.webp" class="img-cover" alt="Top 10" loading="lazy" decoding="async" width="640" height="427">
       </div>
       <div class="p-5">
         <h3 class="serif text-[20px] leading-tight text-ink">Receitas rápidas pra começar</h3>
@@ -964,7 +919,7 @@
       </p>
    <div class="lg:col-span-5 mt-6 relative">
       <div class="aspect-[3/4] rounded-[28px] overflow-hidden shadow-xl img-bg">
-        <img src="./assets/junina/expert-img.webp" class="img-cover" alt="Aline Souza">
+        <img src="./assets/junina/expert-img-fast.webp" class="img-cover" alt="Aline Souza" loading="lazy" decoding="async" width="720" height="720">
       </div>
      
     </div>
@@ -1019,7 +974,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=47" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-renata-cardoso.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Renata Cardoso</span><span class="fbp-meta">· 2 h</span></div>
                 <div class="fbp-text">Eu vivia salvando receita e nunca fazia nada. Com o material eu escolhi uma receita só, calculei o preço e postei no status. Foi a primeira vez que senti que dava pra começar sem me desesperar.</div>
@@ -1027,7 +982,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
+              <div class="fbp-avatar fbp-initials fbp-avatar-blue" aria-label="Avatar com iniciais">EC</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Elaine Costa</span><span class="fbp-meta">· 1 h</span></div>
                 <div class="fbp-text">Também sou dessas que salvava tudo e nunca começava. O que me ajudou foi escolher uma receita só.</div>
@@ -1059,7 +1014,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=45" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-fabiana-castro.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Fabiana Castro</span><span class="fbp-meta">· 5 h</span></div>
                 <div class="fbp-text">Eu não sabia como anunciar sem parecer insistente. Peguei um modelo de status, troquei o sabor e postei em menos de cinco minutos.</div>
@@ -1067,7 +1022,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 3 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">Fabiana, é exatamente essa a ideia: você não precisa inventar texto do zero pra começar.</div>
@@ -1075,7 +1030,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
+              <div class="fbp-avatar fbp-initials fbp-avatar-rose" aria-label="Avatar com iniciais">BL</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Bruna Lima</span><span class="fbp-meta">· 6 h</span></div>
                 <div class="fbp-text">Eu só mudei a forma de escrever no WhatsApp e já parei de parecer que estava pedindo favor. Ficou muito mais profissional.</div>
@@ -1098,7 +1053,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=32" alt="">
+              <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Juliana Almeida</span><span class="fbp-meta">· 1 h</span></div>
                 <div class="fbp-text">Eu achava que precisava comprar um monte de coisa antes. Comecei com uma receita, calculei o preço e abri poucos horários de entrega.</div>
@@ -1106,7 +1061,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 30 min ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">Ju, perfeito. Começar pequeno é melhor do que ficar parada esperando o cenário perfeito.</div>
@@ -1137,7 +1092,7 @@
           <div class="fbp-sort">Mais relevantes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="fbp-list">
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=38" alt="">
+              <img class="fbp-avatar" src="./assets/junina/avatares/avatar-fabiana-castro.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Fabiana Castro</span><span class="fbp-meta">· 1 d</span></div>
                 <div class="fbp-text">O bônus de WhatsApp foi o que mais me ajudou. Eu tinha vergonha de escrever oferecendo, então só copiei, adaptei e postei.</div>
@@ -1145,7 +1100,7 @@
               </div>
             </div>
             <div class="fbp-c reply">
-              <img class="fbp-avatar" src="./assets/junina/expert-img.webp" alt="">
+              <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 20 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
                 <div class="fbp-text">Fabiana, mensagem pronta existe pra isso: tirar o peso da sua cabeça e fazer você agir.</div>
@@ -1153,7 +1108,7 @@
               </div>
             </div>
             <div class="fbp-c">
-              <img class="fbp-avatar" src="https://i.pravatar.cc/120?img=14" alt="">
+              <div class="fbp-avatar fbp-initials fbp-avatar-blue" aria-label="Avatar com iniciais">LN</div>
               <div class="fbp-body">
                 <div class="fbp-head"><span class="fbp-name">Larissa Nogueira</span><span class="fbp-meta">· 18 h</span></div>
                 <div class="fbp-text">Eu tinha vergonha de falar preço no grupo da família. Com a resposta pronta eu mandei sem ficar reescrevendo mil vezes.</div>
@@ -1191,7 +1146,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-planilha-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-planilha-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 01</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Planilha de Preço Sem Prejuízo</h3>
@@ -1204,7 +1159,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-whatsapp-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-whatsapp-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 02</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Roteiros Anti-Vergonha de WhatsApp</h3>
@@ -1217,7 +1172,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-sem-fiado-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-sem-fiado-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 03</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Guia "Sem Fiado, Sem Calote"</h3>
@@ -1230,7 +1185,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-atacadao-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-atacadao-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 04</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Lista do Atacadão de Junho</h3>
@@ -1243,7 +1198,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-embalagem-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-embalagem-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 05</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Manual da Embalagem Certa</h3>
@@ -1256,7 +1211,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-calendario-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-calendario-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 06</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Calendário do São João Lucrativo</h3>
@@ -1269,7 +1224,7 @@
 
       <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
         <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-vitrine-whatsapp-card.webp" class="img-cover opacity-90" alt="">
+          <img src="./assets/junina/bonus-vitrine-whatsapp-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
         </div>
         <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 07</div>
         <h3 class="serif mt-2 text-[20px] leading-tight text-white">Vitrine de WhatsApp Pronta</h3>
@@ -1686,7 +1641,7 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: center / cover no-repeat url('./assets/junina/expert-img.webp');
+    background: center / cover no-repeat url('./assets/junina/expert-img-fast.webp');
     color: transparent;
     flex-shrink: 0;
     position: relative;
@@ -1776,9 +1731,20 @@
     display: block;
     fill: currentColor;
   }
-  .fbp-input-pill .fbp-pill-icons { display: none; }
   .fbp-silhouette { background: #D8DADF; }
   .fbp-silhouette svg { color: #606770; }
+  .fbp-initials {
+    display:grid;
+    place-items:center;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:0;
+  }
+  .fbp-avatar-rose { background:#A8646B; }
+  .fbp-avatar-sage { background:#66806D; }
+  .fbp-avatar-blue { background:#587995; }
+  .fbp-avatar-plum { background:#80677B; }
   @media(max-width: 639px) {
     .fbp-card { border-radius: 16px; }
     .fbp-top { gap: 16px; padding-inline: 9px; }
@@ -1903,8 +1869,7 @@
       <div class="relative z-10 shrink-0 w-28 h-28 rounded-full grid place-items-center text-white relative" style="background:linear-gradient(180deg, #FF7A2A, #EA5D1A);box-shadow:0 14px 36px -8px rgba(234,93,26,.5)">
         <div class="absolute inset-2 rounded-full border-2 border-white/40"></div>
         <div class="text-center">
-          <div class="serif text-[38px] leading-none text-white">14</div>
-          <div class="text-[10px] uppercase tracking-[.18em] font-extrabold mt-1">dias</div>
+          <img src="./assets/junina/garantia.webp" alt="garantia" class="rounded-2xl" srcset="">
         </div>
       </div>
       <div class="text-center sm:text-left">
@@ -2079,10 +2044,8 @@
 <footer class="bg-paper border-t hairline">
   <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-inkSoft font-medium">
     <div class="flex items-center gap-2.5">
-      <span class="w-7 h-7 rounded-full bg-forestDeep grid place-items-center">
-        <span class="w-3 h-3 rounded-full bg-sage" style="box-shadow:0 0 8px #EA5D1A"></span>
-      </span>
-      <span class="font-bold text-ink">Método Junino</span>
+
+      <span class="font-bold text-ink">Festa Junina Lucrativa</span>
     </div>
     <span class="text-inkFaint font-semibold">© 2026 · Todos os direitos reservados</span>
   </div>
