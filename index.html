@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Método Junino — venda comidas típicas de Festa Junina por encomenda</title>
+<title>M&eacute;todo Junino ? renda extra com comidas t&iacute;picas de Festa Junina</title>
 
 <script>
   window.pixelId = "6a0ca8419a73e959243bb614";
@@ -192,7 +192,7 @@
   /* swiper-like marquee */
   @keyframes scrollX{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   .marquee{animation:scrollX 60s linear infinite}
-  
+
   @media(max-width: 639px){
     section h1,
     section h2,
@@ -233,23 +233,42 @@
   }
   section h1 + p,
   section h2 + p{
-    font-size:14px !important;
-    line-height:1.55 !important;
+    font-size:16px !important;
+    line-height:1.6 !important;
   }
   @media(max-width: 639px){
     section h1,
     section h2{
       width:99% !important;
       max-width:99% !important;
-      font-size:32px !important;
+      font-size:28px !important;
       line-height:1.08 !important;
+      overflow-wrap:anywhere !important;
+      word-break:normal !important;
+    }
+    .landscape h1{
+      font-size:27px !important;
+      line-height:1.1 !important;
     }
     section h1 + p,
     section h2 + p{
       width:99% !important;
       max-width:99% !important;
-      font-size:14px !important;
-      line-height:1.55 !important;
+      font-size:16px !important;
+      line-height:1.58 !important;
+      overflow-wrap:anywhere !important;
+    }
+    .btn-cta,
+    .btn-gold{
+      white-space:normal !important;
+      text-align:center !important;
+      line-height:1.2 !important;
+      letter-spacing:.02em !important;
+    }
+    .landscape .btn-cta{
+      font-size:13px !important;
+      padding-left:1.25rem !important;
+      padding-right:1.25rem !important;
     }
 
     section > div[class*="max-w-"]{
@@ -279,6 +298,34 @@
     .car-arrow.prev{left:2px !important;}
     .car-arrow.next{right:2px !important;}
   }
+  /* section spacing boost */
+  body > section:not(.landscape){
+    padding-top:8rem !important;
+    padding-bottom:8rem !important;
+  }
+  @media(min-width:640px){
+    body > section:not(.landscape){
+      padding-top:12rem !important;
+      padding-bottom:12rem !important;
+    }
+  }
+  /* card rhythm */
+  section .grid{row-gap:2rem !important;}
+  .recipe-card > div:last-child{padding:1.5rem !important;}
+  .recipe-card h3 + p{margin-top:.65rem !important;}
+  #receitas .grid,
+  #bonus .grid{gap:1.75rem !important;}
+  #bonus article{padding:1.5rem !important;}
+  #bonus article .aspect-video{margin-bottom:1.5rem !important;}
+  #bonus article h3{margin-top:.6rem !important;}
+  .pain-card .pain-scene{margin-top:1.5rem;}
+  .check li,
+  .cross li{padding-top:12px;padding-bottom:12px;}
+  @media(min-width:640px){
+    section .grid{row-gap:2.25rem !important;}
+    #receitas .grid,
+    #bonus .grid{gap:2rem !important;}
+  }
 </style>
 </head>
 
@@ -288,39 +335,41 @@
 
   <div class="relative bg-cream border-y hairline z-10 max-w-6xl mx-auto px-6 pt-16 sm:pt-20 text-center">
     <h1 class="serif text-[32px] sm:text-[32px] lg:text-[62px] leading-[1.05] tracking-tight mx-auto w-full text-ink">
-      Use a Festa Junina pra fazer até <span class="serif-i">R$1.000 por semana</span> na cozinha da sua casa
+    Precisa de dinheiro rápido em junho? Tente vender essas comidas típicas antes que o São João acabe mesmo começando do zero na cozinha da sua casa
     </h1>
     <p class="mt-6 bg-cream -mb-6 max-w-2xl mx-auto text-[14px] sm:text-[14px] text-inkSoft leading-relaxed font-medium">
-      Você recebe as receitas, o preço já calculado e as mensagens prontas pra vender por encomenda no WhatsApp. Sem experiência, sem gastar muito e sem cozinhar antes de ter o pedido na mão.
-    </p>
+    +150 receitas típicas, preço de venda, cardápios prontos e mensagens de WhatsApp para você divulgar, vender e receber MUITOS pedidos
   </div>
 
   <div class="relative bg-cream z-10 max-w-5xl mx-auto px-2 sm:px-6 mt-12 sm:mt-16 pb-24 sm:pb-32">
     <div class="relative">
 
       <div class="mx-auto rounded-[18px] overflow-hidden shadow-2xl w-full sm:w-full">
-        <img src="./assets/junina/dashboard-fast.webp" alt="Receitas Festa Junina" class="img-cover" loading="lazy" decoding="async" width="1200" height="675">
+        <img src="./assets/junina/avatar-dashboard.webp" alt="Receitas Festa Junina" class="img-cover" loading="lazy" decoding="async" width="1200" height="675">
       </div>
-      
-    
-
-    
 
       <div class="mx-auto text-center mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-        <a href="#price" class="btn-cta inline-flex items-center gap-2 px-6 py-4 text-[14px] w-full sm:w-auto justify-center">
-          QUERO COMEÇAR A VENDER
+        <a href="#price" class="btn-cta inline-flex items-center gap-2 px-10 py-5 text-[15px] w-full sm:w-[430px] max-w-full justify-center">
+          QUERO COMEÇAR A VENDER POR 37,90
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
+      <p class="mt-5 text-center text-[12px] text-inkFaint tracking-wider uppercase font-bold">Acesso imediato · Pagamento único · 14 dias de garantia</p>
     </div>
-
-    
   </div>
 </section>
 
 <section class="bg-paper py-16 sm:py-20 overflow-hidden border-y hairline">
-  <div class="max-w-6xl mx-auto px-6 mb-12 mt-12">
-    <p class="text-center text-[12px] uppercase tracking-[.25em] text-inkFaint font-bold">algumas das +150 receitas juninas prontas pra vender</p>
+  <div class="max-w-6xl mx-auto px-6 mb-12 mt-12 text-center">
+    <h2 class="serif text-[32px] sm:text-[40px] leading-[1.04] tracking-tight text-ink">+150 comidas típicas para transformar junho em dinheiro no bolso</h2>
+    <p class="mt-5 max-w-3xl mx-auto text-inkSoft text-[14px] sm:text-[16px] leading-relaxed font-medium">Não é para fazer tudo. É para escolher as receitas com mais saída, montar seu cardápio junino e começar a vender onde o povo já está com vontade de comprar: WhatsApp, bairro, escola, igreja, praça e festinhas da cidade.</p>
+    <ul class="check mt-8 max-w-3xl mx-auto text-left text-[14px] text-ink space-y-1">
+      <li>Faça dinheiro com comidas que o povo já quer comprar em junho</li>
+      <li>Receba receitas prontas para vender em casa, na escola, na igreja, no bairro e nas festinhas da cidade</li>
+      <li>Saiba quanto cobrar sem ficar perdida fazendo conta de cabeça</li>
+      <li>Use mensagens prontas para encher seu WhatsApp de pedidos sem parecer desesperada</li>
+      <li>Comece com fogão comum, panela normal e o que você já tem em casa</li>
+    </ul>
   </div>
   <div class="relative">
     <div class="flex gap-4 marquee w-max">
@@ -417,44 +466,281 @@
 
 <section class="bg-cream py-28 sm:py-40">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center max-w-3xl mx-auto mb-20 mt-20">
-      <h2 class="serif text-[34px] sm:text-[46px] leading-[1.04] tracking-tight">
-        Você sabe cozinhar. Então por que o dinheiro nunca sobra no fim do mês?
-      </h2>
-      <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-xl mx-auto font-medium">
-        O problema nunca foi a receita. É o medo de gastar com ingrediente e não vender, travar na hora de cobrar e ver junho passar com a sua cozinha parada de novo.
-      </p>
+    <div class="text-center max-w-3xl mx-auto mb-14 mt-20">
+      <h2 class="serif text-[34px] sm:text-[46px] leading-[1.04] tracking-tight">Precisa de dinheiro r&aacute;pido em junho? Tente isso com canjica, caldo, pamonha e bolo de milho</h2>
+      <p class="mt-5 text-inkSoft text-[15px] sm:text-[17px] leading-relaxed max-w-2xl mx-auto font-medium">Junho &eacute; o m&ecirc;s em que as pessoas j&aacute; esperam comer comida t&iacute;pica: escola, quermesse, igreja, pra&ccedil;a, festa da rua, fam&iacute;lia e grupo de WhatsApp chamando gente para comemorar.</p>
     </div>
-
-    <div class="max-w-3xl mx-auto rounded-[28px] bg-white border hairline p-7 sm:p-10 shadow-sm">
-      <ul class="pain-bullets text-left text-[15.5px] sm:text-[17px] leading-relaxed text-inkSoft">
-        <li><span><strong>Você chega no atacadão e trava</strong>, porque não sabe se o dinheiro dos ingredientes vai voltar.</span></li>
-        <li><span><strong>Você não posta o cardápio</strong>, porque tem medo da pessoa perguntar o preço e você não saber responder.</span></li>
-        <li><span><strong>Você cozinha bem, mas vende no improviso</strong>, então qualquer pedido vira ansiedade, conta de cabeça e vergonha de cobrar.</span></li>
-        <li><span><strong>Você vê outras mulheres vendendo em junho</strong> e sente que perdeu mais uma chance de usar sua cozinha pra fazer renda.</span></li>
+    <div class="max-w-3xl mx-auto rounded-[28px] bg-white border hairline p-7 sm:p-10 shadow-sm text-left">
+      <ul class="check text-[15.5px] sm:text-[17px] leading-relaxed text-ink space-y-2">
+        <li>Enquanto muita gente est&aacute; s&oacute; gastando com roupa xadrez, bandeirinha e comida pronta, voc&ecirc; pode estar vendendo.</li>
+        <li>N&atilde;o precisa abrir loja, ter ponto, aparecer em v&iacute;deo ou ser confeiteira profissional.</li>
+        <li>Voc&ecirc; precisa de um card&aacute;pio junino simples, pre&ccedil;o certo e mensagem boa para divulgar.</li>
+        <li>Canjica, caldo, pamonha, bolo de milho e doces juninos j&aacute; est&atilde;o na cabe&ccedil;a das pessoas nessa &eacute;poca.</li>
       </ul>
+      <p class="mt-8 text-ink text-[17px] leading-relaxed font-extrabold">A pergunta n&atilde;o &eacute; se o povo vai comprar comida junina. A pergunta &eacute;: v&atilde;o comprar de voc&ecirc; ou de outra pessoa?</p>
     </div>
-    
-   
   </div>
 </section>
 
-<section class="fbp-section bg-paper py-20 sm:py-28 border-y hairline overflow-hidden">
-  <div class="max-w-3xl mx-auto px-6 text-center mb-10">
-    <h2 class="serif mt-4 text-[32px] sm:text-[40px] leading-[1.04] tracking-tight text-ink">
-      Mulheres que também travavam antes de começar
-    </h2>
-    <p class="mt-4 text-[11px] uppercase tracking-[.22em] text-inkFaint font-bold">Use as setas, arraste para o lado ou toque nos dots abaixo</p>
+<section class="bg-paper py-28 sm:py-40 border-y hairline">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 class="serif mt-4 text-[32px] sm:text-[40px] leading-[1.04] tracking-tight text-ink">Você pode até cozinhar bem, mas sempre vê outras mulheres vendendo mais que você</h2>
+      <p class="mt-5 text-inkSoft text-[15px] sm:text-[16px] leading-relaxed max-w-2xl mx-auto font-medium">Você sabe fazer comida boa. Sua família elogia. O povo fala que seu tempero é bom. Mas na hora de vender, trava.</p>
+      <p class="mt-5 text-inkSoft text-[15px] sm:text-[16px] leading-relaxed max-w-2xl mx-auto font-medium">Dá medo de cobrar. Dá branco no preço. Dá vergonha de postar. Dá raiva de ver a vizinha vendendo uma comida pior e tirando dinheiro disso.</p>
+    </div>
+    <div class="max-w-3xl mx-auto rounded-[28px] bg-white border hairline p-7 sm:p-10 shadow-sm">
+      <ul class="pain-bullets text-left text-[15.5px] sm:text-[17px] leading-relaxed text-inkSoft">
+        <li><span>Você tem medo de cobrar caro e ninguém comprar</span></li>
+        <li><span>Tem medo de cobrar barato e trabalhar de graça</span></li>
+        <li><span>Não sabe calcular milho, gás, embalagem, leite condensado e lucro</span></li>
+        <li><span>Tem vergonha de postar no WhatsApp dizendo que está vendendo</span></li>
+        <li><span>Fica com medo de parente pedir fiado e você não saber negar</span></li>
+        <li><span>Sente que junho passa todo ano e você perde a chance de fazer dinheiro</span></li>
+        <li><span>Vê outras pessoas vendendo nas festinhas e pensa: “minha comida é melhor que a dela”</span></li>
+      </ul>
+      <p class="mt-7 text-ink text-[16px] sm:text-[17px] leading-relaxed font-extrabold">O problema não é sua comida. O problema é que ninguém te entregou um jeito simples de transformar sua comida em venda.</p>
+    </div>
+    <div class="mt-10 text-center">
+      <a href="#price" class="btn-cta inline-flex items-center justify-center gap-2 px-8 py-4 text-[14px] w-full sm:w-auto">
+        QUERO VER A OFERTA AGORA
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </div>
+</section>
 
+<section class="bg-paper py-28 sm:py-40 border-y hairline">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="serif text-[34px] sm:text-[34px] leading-[1.04] tracking-tight text-ink">O jeito mais rápido de sair no prejuízo é tentar vender comida junina no improviso</h2>
+      <p class="mt-5 text-inkSoft text-[14px] leading-relaxed max-w-2xl mx-auto font-medium">É assim que muita mulher se enrola: assiste um vídeo no YouTube, anota receita no caderno, compra ingrediente no atacadão, faz conta de cabeça, cozinha no medo, posta qualquer coisa, aceita desconto, vende fiado e no final descobre que trabalhou quase de graça.</p>
+    </div>
+    <div class="mt-16 grid md:grid-cols-3 gap-6">
+      <div class="pain-card glass-soft rounded-[28px] p-8">
+        <div class="text-[20px] font-bold leading-tight text-ink">Receita solta n&atilde;o vira venda sozinha</div>
+        <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Sem card&aacute;pio, sem pre&ccedil;o e sem mensagem certa, voc&ecirc; trabalha no susto e fica sem saber se lucrou.</p>
+        <div class="pain-scene"><img src="./assets/junina/dor-preco-anime.webp" alt="Ilustracao em anime adulto sobre calculo de custos para comidas juninas" loading="lazy" decoding="async" width="640" height="360"></div>
+      </div>
+      <div class="pain-card glass-soft rounded-[28px] p-8">
+        <div class="text-[20px] font-bold leading-tight text-ink">Improviso faz voc&ecirc; aceitar qualquer coisa</div>
+        <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Desconto, fiado, vergonha de cobrar e conta de cabe&ccedil;a fazem a Festa Junina virar cansa&ccedil;o em vez de renda extra.</p>
+        <div class="pain-scene"><img src="./assets/junina/dor-cobranca-anime.webp" alt="Ilustracao em anime adulto sobre cobranca por mensagem para encomendas juninas" loading="lazy" decoding="async" width="640" height="360"></div>
+      </div>
+      <div class="pain-card glass-soft rounded-[28px] p-8">
+        <div class="text-[20px] font-bold leading-tight text-ink">Com m&eacute;todo, junho fica mais simples</div>
+        <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Vender comida junina pode ser simples quando você tem receita certa, preço certo, cardápio pronto e mensagem pronta para vender.</p>
+        <div class="pain-scene"><img src="./assets/junina/dor-encalhe-anime.webp" alt="Ilustracao em anime adulto sobre producao junina aguardando encomendas" loading="lazy" decoding="async" width="640" height="360"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-28 sm:py-40 border-y hairline">
+  <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="serif mt-4 text-[32px] sm:text-[32px] leading-[1.04] tracking-tight">O segredo &eacute; transformar sua cozinha em uma pequena barraca junina no WhatsApp</h2>
+      <p class="mt-5 text-inkSoft text-[14px] leading-relaxed max-w-xl font-medium">Voc&ecirc; n&atilde;o precisa montar barraca de verdade. O M&eacute;todo Junino te mostra como divulgar comidas t&iacute;picas, receber pedidos, cobrar certo e vender nas oportunidades que aparecem em junho.</p>
+      <ul class="mt-10 space-y-8">
+        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
+          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-3">
+            <span class="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-sage/10 text-sage grid place-items-center text-[13px] font-black">01</span>
+            <span>Escolha as comidas com mais sa&iacute;da</span>
+          </div>
+          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Comece por uma receita simples e com cara de S&atilde;o Jo&atilde;o, sem tentar fazer tudo ao mesmo tempo.</p>
+          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg"><img src="./assets/junina/passo-receita-desejo-br.webp" alt="Passo do M&eacute;todo Junino" class="img-cover" loading="lazy" decoding="async" width="960" height="540"></div>
+        </li>
+        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
+          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-3">
+            <span class="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-sage/10 text-sage grid place-items-center text-[13px] font-black">02</span>
+            <span>Coloque pre&ccedil;o sem virar contadora</span>
+          </div>
+          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Use a calculadora do app para saber quanto cobrar e parar de vender no medo ou no chute.</p>
+          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg"><img src="./assets/junina/passo-preco-desejo-br.webp" alt="Passo do M&eacute;todo Junino" class="img-cover" loading="lazy" decoding="async" width="960" height="540"></div>
+        </li>
+        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
+          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-3">
+            <span class="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-sage/10 text-sage grid place-items-center text-[13px] font-black">03</span>
+            <span>Divulgue com mensagens prontas</span>
+          </div>
+          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Copie, adapte e mande textos para status, grupo e conversa individual sem parecer insistente.</p>
+          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg"><img src="./assets/junina/passo-whatsapp-desejo-br.webp" alt="Passo do M&eacute;todo Junino" class="img-cover" loading="lazy" decoding="async" width="960" height="540"></div>
+        </li>
+        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
+          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-3">
+            <span class="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-sage/10 text-sage grid place-items-center text-[13px] font-black">04</span>
+            <span>Venda nas brechas que junho te d&aacute;</span>
+          </div>
+          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Festa da escola, quermesse da igreja, festa da rua, festa da firma, arrai&aacute; de fam&iacute;lia, grupo de m&atilde;es e vizinha querendo levar sobremesa.</p>
+          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg"><img src="./assets/junina/bonus-calendario-card-fast.webp" alt="Passo do M&eacute;todo Junino" class="img-cover" loading="lazy" decoding="async" width="960" height="540"></div>
+        </li>
+        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
+          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-3">
+            <span class="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-sage/10 text-sage grid place-items-center text-[13px] font-black">05</span>
+            <span>Receba e entregue sem virar bagun&ccedil;a</span>
+          </div>
+          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Organize os pedidos, combine pagamento, prepare com calma e entregue sem transformar sua cozinha em bagun&ccedil;a.</p>
+          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg"><img src="./assets/junina/bonus-embalagem-card-fast.webp" alt="Passo do M&eacute;todo Junino" class="img-cover" loading="lazy" decoding="async" width="960" height="540"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <a href="#price" class="btn-cta inline-flex items-center gap-2 px-8 py-4 text-[14px]">
+        QUERO VENDER AGORA
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ DEPOIMENTOS (após passo a passo) — RESULTADO FINANCEIRO ━━━ -->
+
+
+<section id="receitas" class="bg-cream py-28 sm:py-40 border-b hairline">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="serif mt-4 text-[32px] sm:text-[32px] leading-[1.04] tracking-tight">Tudo que voc&ecirc; precisa para come&ccedil;ar a vender comida junina sem ficar perdida</h2>
+    <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-xl mx-auto font-medium">Voc&ecirc; abre o app, escolhe o que vender, confere o pre&ccedil;o e j&aacute; tem o texto certo para divulgar no WhatsApp.</p>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
+      <div class="aspect-[16/10] overflow-hidden img-bg"><img src="./assets/junina/entregavel-app-receitas.webp" class="img-cover" alt="App com receitas juninas" loading="lazy" decoding="async" width="960" height="600"></div>
+      <div class="p-5">
+        <h3 class="serif text-[20px] leading-tight text-ink">Receitas no app</h3>
+        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Escolha doces, bolos, caldos e comidas de milho sem ca&ccedil;ar receita solta.</p>
+      </div>
+    </article>
+    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
+      <div class="aspect-[16/10] overflow-hidden img-bg"><img src="./assets/junina/entregavel-cardapio-pronto.webp" class="img-cover" alt="Cardapios juninos prontos" loading="lazy" decoding="async" width="960" height="600"></div>
+      <div class="p-5">
+        <h3 class="serif text-[20px] leading-tight text-ink">Card&aacute;pio pronto</h3>
+        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Monte sua oferta de junho com combina&ccedil;&otilde;es simples e f&aacute;ceis de entender.</p>
+      </div>
+    </article>
+    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
+      <div class="aspect-[16/10] overflow-hidden img-bg"><img src="./assets/junina/entregavel-calculadora-preco.webp" class="img-cover" alt="Calculadora de preco e lucro" loading="lazy" decoding="async" width="960" height="600"></div>
+      <div class="p-5">
+        <h3 class="serif text-[20px] leading-tight text-ink">Pre&ccedil;o sem chute</h3>
+        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Informe seus custos e veja quanto cobrar para n&atilde;o vender no preju&iacute;zo.</p>
+      </div>
+    </article>
+    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
+      <div class="aspect-[16/10] overflow-hidden img-bg"><img src="./assets/junina/entregavel-whatsapp.webp" class="img-cover" alt="Mensagens de WhatsApp para vender" loading="lazy" decoding="async" width="960" height="600"></div>
+      <div class="p-5">
+        <h3 class="serif text-[20px] leading-tight text-ink">Textos de venda</h3>
+        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Copie, adapte e mande no status, grupo ou conversa individual.</p>
+      </div>
+    </article>
+    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
+      <div class="aspect-[16/10] overflow-hidden img-bg"><img src="./assets/junina/entregavel-festinhas.webp" class="img-cover" alt="Planejamento para vender nas festinhas" loading="lazy" decoding="async" width="960" height="600"></div>
+      <div class="p-5">
+        <h3 class="serif text-[20px] leading-tight text-ink">Onde oferecer</h3>
+        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Use as brechas de escola, igreja, rua, fam&iacute;lia e grupos da cidade.</p>
+      </div>
+    </article>
+    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
+      <div class="aspect-[16/10] overflow-hidden img-bg"><img src="./assets/junina/entregavel-embalagens.webp" class="img-cover" alt="Embalagens para comidas juninas" loading="lazy" decoding="async" width="960" height="600"></div>
+      <div class="p-5">
+        <h3 class="serif text-[20px] leading-tight text-ink">Entrega organizada</h3>
+        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Por&ccedil;&atilde;o, embalagem e apresenta&ccedil;&atilde;o para vender com mais confian&ccedil;a.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="bonus" class="bg-forestDeep text-cream py-28 sm:py-40 relative overflow-hidden">
+  <svg class="absolute inset-0 w-full h-full opacity-[.06]" preserveAspectRatio="none" viewBox="0 0 1000 600" fill="none"><path d="M0 100 Q250 80 500 130 T1000 100" stroke="#FFB546" stroke-width="1.5"/><path d="M0 200 Q250 170 500 230 T1000 200" stroke="#FFB546" stroke-width="1.5"/><path d="M0 300 Q250 270 500 330 T1000 300" stroke="#FFB546" stroke-width="1.5"/></svg>
+  <div class="max-w-6xl mx-auto px-6 relative">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="serif mt-4 text-[34px] sm:text-[46px] leading-[1.04] tracking-tight">B&ocirc;nus pr&aacute;ticos para vender com menos medo no S&atilde;o Jo&atilde;o</h2>
+      <p class="mt-5 text-[15px] text-cream/80 font-medium">Apoios r&aacute;pidos para pre&ccedil;o, divulga&ccedil;&atilde;o, cobran&ccedil;a, compra, embalagem e planejamento.</p>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-planilha-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 01</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Calculadora de Pre&ccedil;o no App</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Ponha o custo e veja quanto cobrar para lucrar.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 67,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-whatsapp-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 02</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Roteiros Anti-Vergonha</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Mensagens para status, grupo e resposta individual.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 47,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-sem-fiado-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 03</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Sem Fiado, Sem Calote</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Frases para cobrar sinal sem briga.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 37,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-atacadao-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 04</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Lista do Atacad&atilde;o</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Compre o necess&aacute;rio sem se perder.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 47,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-embalagem-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 05</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Manual da Embalagem</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Tamanho, por&ccedil;&atilde;o e apresenta&ccedil;&atilde;o.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 37,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-calendario-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 06</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Calend&aacute;rio Lucrativo</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Quando divulgar, produzir e entregar.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 57,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-5">
+        <div class="aspect-video rounded-2xl overflow-hidden mb-4 img-bg"><img src="./assets/junina/bonus-vitrine-whatsapp-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480"></div>
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">B&ocirc;nus 07</div>
+        <h3 class="serif mt-2 text-[18px] leading-tight text-white">Vitrine de WhatsApp</h3>
+        <p class="mt-3 text-[12.5px] text-cream/70 leading-relaxed">Textos para organizar sua oferta.</p>
+        <div class="mt-4 flex items-baseline gap-2"><span class="strike text-cream/40 text-[13px]">R$ 67,00</span><span class="text-[#FFC857] font-bold tracking-wide text-[11px]">HOJE &Eacute; GR&Aacute;TIS!</span></div>
+      </article>
+      <article class="rounded-[24px] bg-white/10 border border-white/15 backdrop-blur p-6 flex flex-col items-center justify-center text-center min-h-[250px]">
+        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Total dos b&ocirc;nus</div>
+        <div class="serif mt-5 text-[36px] leading-none text-cream/45 line-through">R$ 359</div>
+        <div class="serif mt-4 text-[28px] leading-none text-gold">Hoje &eacute; gr&aacute;tis</div>
+        <p class="mt-4 text-[13px] text-cream/75 leading-relaxed max-w-[240px]">Tudo incluso para voc&ecirc; come&ccedil;ar com dire&ccedil;&atilde;o, pre&ccedil;o e divulga&ccedil;&atilde;o.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="autora" class="bg-paper py-28 sm:py-40 border-b hairline">
+  <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="serif mt-4 text-[32px] sm:text-[36px] leading-[1.04] tracking-tight text-ink">A Aline descobriu que vender comida junina n&atilde;o precisa ser no improviso</h2>
+      <p class="mt-6 text-inkSoft text-[15.5px] leading-relaxed font-medium">Ela tamb&eacute;m achava que cozinhar bem era suficiente. Mas o que destrava venda &eacute; ter card&aacute;pio, pre&ccedil;o, mensagem e um jeito simples de aparecer na hora certa.</p>
+      <p class="mt-4 text-inkSoft text-center text-[15.5px] leading-relaxed font-medium">Hoje ela colocou esse caminho dentro do app: receitas, pre&ccedil;o, roteiros de WhatsApp e orienta&ccedil;&atilde;o para vender nas festinhas da cidade.</p>
+
+    </div>
+    <div class="lg:col-span-5 relative">
+      <div class="aspect-[3/4] rounded-[28px] overflow-hidden shadow-xl img-bg"><img src="./assets/junina/expert-img-fast.webp" class="img-cover" alt="Aline Souza" loading="lazy" decoding="async" width="720" height="720"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ━━━ DEPOIMENTOS (após relatos da expert) — TÉCNICA + COMUNIDADE ━━━ -->
+<section class="fbp-section bg-cream py-28 sm:py-36 border-b hairline overflow-hidden">
+  <div class="max-w-3xl mx-auto px-6 text-center mb-12">
+    <h2 class="serif mt-4 text-[32px] sm:text-[40px] leading-[1.04] tracking-tight text-ink">Mulheres comuns que tamb&eacute;m come&ccedil;aram com medo de vender</h2>
+    <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-xl mx-auto font-medium">Elas n&atilde;o precisavam de cozinha profissional. Precisavam de dire&ccedil;&atilde;o, pre&ccedil;o certo e coragem para divulgar do jeito certo.</p>
+    <p class="mt-3 text-inkSoft text-[14px] leading-relaxed max-w-xl mx-auto font-medium">Veja o que muda quando voc&ecirc; para de tentar ganhar dinheiro no improviso e come&ccedil;a a vender comida junina com m&eacute;todo.</p>
+  </div>
   <div class="w-full">
     <div class="carousel-wrap">
-      <button class="car-arrow prev" aria-label="Anterior">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="car-arrow next" aria-label="Próximo">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+      <button class="car-arrow prev" aria-label="Anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="car-arrow next" aria-label="Pr&oacute;ximo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="h-scroll">
         <article class="fbp-card">
           <div class="fbp-top">
@@ -467,16 +753,17 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-cintia-moreira.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Cíntia Moreira</span><span class="fbp-meta">· 5 h</span></div>
-                <div class="fbp-text">Eu sempre desistia na hora de comprar os ingredientes. Quando vi que dava pra abrir encomenda antes, consegui sair do medo e postar meu primeiro cardápio.</div>
+                <div class="fbp-head"><span class="fbp-name">C&iacute;ntia Moreira</span><span class="fbp-meta">&middot; 5 h</span></div>
+                <div class="fbp-text">Eu sempre desistia na hora de comprar os ingredientes. Quando vi que dava pra abrir pedido antes, consegui sair do medo e postar meu primeiro card&aacute;pio.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Sueli Nascimento</span><span class="fbp-meta">· 4 h</span></div>
-                <div class="fbp-text">Eu também travava no mercado. Só de saber o que comprar depois do pedido já dá outra segurança.</div>
+                <div class="fbp-head"><span class="fbp-name">Sueli Nascimento</span><span class="fbp-meta">&middot; 4 h</span></div>
+                <div class="fbp-text">Eu tamb&eacute;m travava no mercado. S&oacute; de saber o que comprar depois que aparece interesse j&aacute; d&aacute; outra seguran&ccedil;a.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
                 <div class="fbp-expert-like" aria-label="Curtido"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></div>
               </div>
@@ -484,18 +771,15 @@
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Marta Cristina</span><span class="fbp-meta">· 6 h</span></div>
+                <div class="fbp-head"><span class="fbp-name">Marta Cristina</span><span class="fbp-meta">&middot; 6 h</span></div>
                 <div class="fbp-text">O que mais me pegava era vergonha de cobrar. Usei as frases prontas e parei de ficar explicando demais.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>96</span>
@@ -507,160 +791,33 @@
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-sage" aria-label="Avatar com iniciais">PA</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Priscila Andrade</span><span class="fbp-meta">· 1 d</span></div>
-                <div class="fbp-text">Eu achava que precisava fazer um monte de canjica pra mostrar que vendia. Agora divulgo primeiro e só compro o que preciso depois dos pedidos.</div>
+                <div class="fbp-head"><span class="fbp-name">Priscila Andrade</span><span class="fbp-meta">&middot; 1 d</span></div>
+                <div class="fbp-text">Eu achava que precisava fazer um monte de canjica pra mostrar que vendia. Agora divulgo primeiro e s&oacute; compro o que preciso depois dos pedidos.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 22 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Perfeito, Pri. Produção sem pedido é o que dá medo. Encomenda antes muda tudo.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 22 h</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">Perfeito, Pri. Produ&ccedil;&atilde;o sem dire&ccedil;&atilde;o &eacute; o que d&aacute; medo. Oferta organizada muda tudo.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Solange Vieira</span><span class="fbp-meta">· 23 h</span></div>
-                <div class="fbp-text">A parte do preço foi a que destravou. Antes eu colocava qualquer valor e depois ficava com raiva de mim mesma.</div>
+                <div class="fbp-head"><span class="fbp-name">Solange Vieira</span><span class="fbp-meta">&middot; 23 h</span></div>
+                <div class="fbp-text">A parte do pre&ccedil;o foi a que destravou. Antes eu colocava qualquer valor e depois ficava com raiva de mim mesma.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-paper py-28 sm:py-40 border-y hairline">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="serif text-[34px] sm:text-[34px] leading-[1.04] tracking-tight text-ink">
-        Você tem medo de gastar à toa nos ingredientes e ficar com tudo encalhado
-      </h2>
-      <p class="mt-5 text-inkSoft text-[14px] leading-relaxed max-w-xl mx-auto font-medium">
-        Receita qualquer pessoa acha no YouTube. O que quase ninguém te entrega é o caminho entre “eu sei fazer” e “eu recebi o pagamento”.
-      </p>
-    </div>
-
-    <div class="mt-16 grid md:grid-cols-3 gap-6">
-      <div class="pain-card glass-soft rounded-[28px] p-8">
-        <div class="text-[20px] font-bold leading-tight text-ink">Você tem medo de errar o preço e trabalhar de graça</div>
-        <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Porque não adianta vender tudo e, no final, descobrir que o lucro ficou no gás, na embalagem, no leite condensado e no amendoim.</p>
-        <div class="pain-scene">
-          <img src="./assets/junina/dor-preco-anime.webp" alt="Ilustracao em anime adulto sobre calculo de custos para comidas juninas" loading="lazy" decoding="async" width="640" height="360">
-        </div>
-      </div>
-      <div class="pain-card glass-soft rounded-[28px] p-8">
-        <div class="text-[20px] font-bold leading-tight text-ink">Você tem vergonha de cobrar de quem conhece você</div>
-        <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">Vender pra desconhecido já assusta. Mas vender pra vizinha, mãe da escola, parente e conhecido parece pior ainda.</p>
-        <div class="pain-scene">
-          <img src="./assets/junina/dor-cobranca-anime.webp" alt="Ilustracao em anime adulto sobre cobranca por mensagem para encomendas juninas" loading="lazy" decoding="async" width="640" height="360">
-        </div>
-      </div>
-      <div class="pain-card glass-soft rounded-[28px] p-8">
-        <div class="text-[20px] font-bold leading-tight text-ink">Você tem pavor de fazer comida e ficar com tudo parado</div>
-        <p class="mt-3 text-inkSoft text-[14px] leading-relaxed font-medium">É por isso que o método não começa mandando você cozinhar um monte. Ele começa pelo mais importante: vender antes de produzir.</p>
-        <div class="pain-scene">
-          <img src="./assets/junina/dor-encalhe-anime.webp" alt="Ilustracao em anime adulto sobre producao junina aguardando encomendas" loading="lazy" decoding="async" width="640" height="360">
-        </div>
-      </div>
-    </div>
-
- 
-  </div>
-</section>
-
-<section class="bg-paper py-28 sm:py-40 border-y hairline">
-  <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7">
-      
-      <h2 class="serif mt-4 text-[32px] sm:text-[32px] leading-[1.04] tracking-tight">
-        Método Festa Junina Lucrativa: <span class="serif-i">venda primeiro e cozinhe depois </span>( sem correr atrás de ninguém )
-      </h2>
-      <p class="mt-5 text-inkSoft text-[14px] leading-relaxed max-w-xl font-medium">
-        Um jeito simples de aproveitar a época do ano em que as pessoas já estão procurando canjica, caldo, pamonha, bolo de milho e doces típicos — sem precisar adivinhar receita, chutar preço ou se expor no portão.
-      </p>
-
-      <ul class="mt-10 space-y-12">
-        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
-          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-2.5">
-            <svg class="mt-0.5 shrink-0 text-sage" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19.5V6.8A2.8 2.8 0 016.8 4H20v15H6.5A2.5 2.5 0 004 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span>Escolha o que vende mais rápido nas festinhas</span>
-          </div>
-          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Pare de torcer pra alguém comprar. São +150 receitas separadas por categoria pra você começar pela que tem saída de verdade no seu bairro, na escola, na igreja, nas festas juninas ou no WhatsApp.</p>
-          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-receita-desejo-br.webp" alt="Comidas juninas prontas para vender em uma mesa de cozinha brasileira" class="img-cover" loading="lazy" decoding="async" width="960" height="541">
-          </div>
-        </li>
-        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
-          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-2.5">
-            <svg class="mt-0.5 shrink-0 text-sage" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 7h8M8 12h2M12 12h2M16 12h0M8 16h2M12 16h2M16 16h0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span>Invista pouco nos ingredientes e lucre mais</span>
-          </div>
-          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Chega de trabalhar de graça. O app já te mostra quanto custa produzir e quanto cobrar pra você ter lucro de verdade.</p>
-          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-preco-desejo-br.webp" alt="Precificação simples de comidas juninas prontas para vender" class="img-cover" loading="lazy" decoding="async" width="960" height="540">
-          </div>
-        </li>
-        
-        <li class="bg-white rounded-2xl border hairline shadow-sm p-6 sm:p-7">
-          <div class="text-[17px] sm:text-[19px] font-bold leading-snug text-ink flex items-start gap-2.5">
-            <svg class="mt-0.5 shrink-0 text-sage" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.4L3 20.5l1.7-5.1A8.5 8.5 0 1121 11.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10h6M9 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span>Venda também no WhatsApp com roteiros de vendas prontos</span>
-          </div>
-          <p class="mt-2 text-inkSoft text-[14px] sm:text-[14.5px] leading-relaxed font-medium">Sem parecer insistente e sem se humilhar. Mensagens prontas pra status, grupo e resposta individual: é só copiar, adaptar e mandar.</p>
-          <div class="mt-5 aspect-[16/9] rounded-xl overflow-hidden img-bg">
-            <img src="./assets/junina/passo-whatsapp-desejo-br.webp" alt="Comidas juninas embaladas sendo vendidas pelo WhatsApp" class="img-cover" loading="lazy" decoding="async" width="960" height="540">
-          </div>
-        </li>
-      
-      </ul>
-      
-    
-    </div>
-
-    
-     <div class="text-center">
-        <a href="#price" class="btn-cta inline-flex items-center gap-2 px-8 py-4 text-[14px]">
-          QUERO VENDER AGORA
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-  </div>
-
-
-</section>
-
-<!-- ━━━ DEPOIMENTOS (após passo a passo) — RESULTADO FINANCEIRO ━━━ -->
-<section class="fbp-section bg-cream py-28 sm:py-36 border-b hairline overflow-hidden">
-  <div class="max-w-3xl mx-auto px-6 text-center mb-12">
-
-    <h2 class="serif mt-4 text-[32px] sm:text-[32px] leading-[1.04] tracking-tight text-ink">
-      Resultado de donas de casa nessa <span class="serif-i">festa junina</span>
-    </h2>
-     <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-xl font-medium">
-        Investindo pouco em ingredientes e com um passo a passo simples pra vender pelo WhatsApp e nas festinhas da sua cidade
-      </p>
-   
-  </div>
-
-  <div class="w-full">
-    <div class="carousel-wrap">
-      <button class="car-arrow prev" aria-label="Anterior">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="car-arrow next" aria-label="Próximo">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="h-scroll">
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>203</span>
@@ -672,16 +829,17 @@
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-plum" aria-label="Avatar com iniciais">MS</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Marina Souza</span><span class="fbp-meta">· 8 h</span></div>
-                <div class="fbp-text">Abri o app, vi o preço certo da minha canjica e percebi que eu cobrava muito abaixo. Só isso já mudou minha coragem de vender.</div>
+                <div class="fbp-head"><span class="fbp-name">Marina Souza</span><span class="fbp-meta">&middot; 8 h</span></div>
+                <div class="fbp-text">Abri o app, vi o pre&ccedil;o certo da minha canjica e percebi que eu cobrava muito abaixo. S&oacute; isso j&aacute; mudou minha coragem de vender.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Patrícia Moura</span><span class="fbp-meta">· 6 h</span></div>
-                <div class="fbp-text">Esse negócio do preço é real. Eu sempre esquecia embalagem e achava que estava lucrando.</div>
+                <div class="fbp-head"><span class="fbp-name">Patr&iacute;cia Moura</span><span class="fbp-meta">&middot; 6 h</span></div>
+                <div class="fbp-text">Esse neg&oacute;cio do pre&ccedil;o &eacute; real. Eu sempre esquecia embalagem e achava que estava lucrando.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
                 <div class="fbp-expert-like" aria-label="Curtido"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></div>
               </div>
@@ -689,18 +847,15 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-eliane-barbosa.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Eliane Barbosa</span><span class="fbp-meta">· 7 h</span></div>
-                <div class="fbp-text">Eu tinha vergonha até de postar no status. Usei a mensagem pronta, abri encomenda pra pamonha e meu marido acabou me ajudando a embalar no domingo.</div>
+                <div class="fbp-head"><span class="fbp-name">Eliane Barbosa</span><span class="fbp-meta">&middot; 7 h</span></div>
+                <div class="fbp-text">Eu tinha vergonha at&eacute; de postar no status. Usei a mensagem pronta, ofereci pamonha e meu marido acabou me ajudando a embalar no domingo.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>421</span>
@@ -712,34 +867,33 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-rosangela-martins.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Rosângela Martins</span><span class="fbp-meta">· 2 d</span></div>
-                <div class="fbp-text">Consegui vender canjica, bolo de milho e quentão no mesmo fim de semana. O melhor foi receber antes e não ficar com comida parada.</div>
+                <div class="fbp-head"><span class="fbp-name">Ros&acirc;ngela Martins</span><span class="fbp-meta">&middot; 2 d</span></div>
+                <div class="fbp-text">Consegui vender canjica, bolo de milho e quent&atilde;o no mesmo fim de semana. O melhor foi receber antes e n&atilde;o ficar com comida parada.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 2 d ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Rosângela, esse é o jogo: encomenda primeiro, cozinha depois. Menos medo, mais controle.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 2 d</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">Ros&acirc;ngela, esse &eacute; o jogo: oferta simples, pre&ccedil;o certo e controle da produ&ccedil;&atilde;o.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Cristina Duarte</span><span class="fbp-meta">· 1 d</span></div>
-                <div class="fbp-text">Fiz a lista antes de sair de casa e foi outra coisa. Não fiquei perdida no mercado nem comprando coisa no impulso.</div>
+                <div class="fbp-head"><span class="fbp-name">Cristina Duarte</span><span class="fbp-meta">&middot; 1 d</span></div>
+                <div class="fbp-text">Fiz a lista antes de sair de casa e foi outra coisa. N&atilde;o fiquei perdida no mercado nem comprando coisa no impulso.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>312</span>
@@ -751,34 +905,33 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-vanessa-oliveira.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Vanessa Oliveira</span><span class="fbp-meta">· 1 d</span></div>
-                <div class="fbp-text">Coloquei meus custos no app e entendi onde eu estava vendendo barato demais. Só isso já tirou um peso enorme.</div>
+                <div class="fbp-head"><span class="fbp-name">Vanessa Oliveira</span><span class="fbp-meta">&middot; 1 d</span></div>
+                <div class="fbp-text">Coloquei meus custos no app e entendi onde eu estava vendendo barato demais. S&oacute; isso j&aacute; tirou um peso enorme.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 22 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">É isso, Vanessa. Clareza no preço muda a forma como você oferece sem pedir desculpa por cobrar.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 22 h</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">&Eacute; isso, Vanessa. Clareza no pre&ccedil;o muda a forma como voc&ecirc; oferece sem pedir desculpa por cobrar.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aparecida Lopes</span><span class="fbp-meta">· 1 d</span></div>
-                <div class="fbp-text">Tenho 58 anos e achei que não ia conseguir mexer no celular. As receitas no PDF abrem tudo, dá pra imprimir e levar pra cozinha.</div>
+                <div class="fbp-head"><span class="fbp-name">Aparecida Lopes</span><span class="fbp-meta">&middot; 1 d</span></div>
+                <div class="fbp-text">Tenho 58 anos e achei que n&atilde;o ia conseguir mexer no celular. As receitas abrem no app e tamb&eacute;m d&aacute; pra consultar com calma.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>74</span>
@@ -790,189 +943,33 @@
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-plum" aria-label="Avatar com iniciais">SP</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Sandra Pereira</span><span class="fbp-meta">· 11 h</span></div>
-                <div class="fbp-text">Comprei meio sem fé porque eu travava muito pra cobrar parente. As frases prontas me ajudaram a pedir sinal sem parecer grossa.</div>
+                <div class="fbp-head"><span class="fbp-name">Sandra Pereira</span><span class="fbp-meta">&middot; 11 h</span></div>
+                <div class="fbp-text">Comprei meio sem f&eacute; porque eu travava muito pra cobrar parente. As frases prontas me ajudaram a pedir sinal sem parecer grossa.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 9 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Sandra, pedir sinal com educação muda tudo. Você continua gentil, mas para de carregar o risco sozinha.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 9 h</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">Sandra, pedir sinal com educa&ccedil;&atilde;o muda tudo. Voc&ecirc; continua gentil, mas para de carregar o risco sozinha.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-rose" aria-label="Avatar com iniciais">DR</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Daniela Rocha</span><span class="fbp-meta">· 10 h</span></div>
-                <div class="fbp-text">Postei primeiro no status só pra testar e recebi pedido de duas vizinhas. Foi pouco, mas foi a primeira vez que eu não cozinhei no escuro.</div>
+                <div class="fbp-head"><span class="fbp-name">Daniela Rocha</span><span class="fbp-meta">&middot; 10 h</span></div>
+                <div class="fbp-text">Postei primeiro no status s&oacute; pra testar e recebi pedido de duas vizinhas. Foi pouco, mas foi a primeira vez que eu n&atilde;o cozinhei no escuro.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="receitas" class="bg-cream py-28 sm:py-40 border-b hairline">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-  
-    <h2 class="serif mt-4 text-[32px] sm:text-[32px] leading-[1.04] tracking-tight">
-      Um cardápio junino completo pra você escolher o que vender primeiro
-    </h2>
-    <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-xl mx-auto font-medium">
-      Você recebe mais de 150 receitas típicas com modo de preparo, lista de ingredientes, rendimento e orientação pra transformar cada receita em produto vendável.
-    </p>
-  </div>
-
-  <div class="max-w-6xl mx-auto px-6 mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
-      <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/doces-card-fast.webp" class="img-cover" alt="Doces" loading="lazy" decoding="async" width="640" height="427">
-      </div>
-      <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight text-ink">Doces juninos</h3>
-        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Canjica, curau, arroz doce, pé de moleque, cocada, paçoca e doce de abóbora</p>
-      </div>
-    </article>
-
-    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
-      <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/salgados-card-fast.webp" class="img-cover" alt="Salgados" loading="lazy" decoding="async" width="640" height="427">
-      </div>
-      <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight text-ink">Bolos e receitas de milho</h3>
-        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Bolo de milho, bolo de fubá, bolo de aipim, pamonha, broa e opções pra fatias</p>
-      </div>
-    </article>
-
-    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
-      <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/caldos-card-fast.webp" class="img-cover" alt="Caldos" loading="lazy" decoding="async" width="640" height="427">
-      </div>
-      <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight text-ink">Caldos e comidas quentes</h3>
-        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Caldo verde, mandioca, feijão e receitas perfeitas pra noites frias</p>
-      </div>
-    </article>
-
-    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
-      <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/bebidas-doces-vara-card-fast.webp" class="img-cover" alt="Bebidas" loading="lazy" decoding="async" width="640" height="427">
-      </div>
-      <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight text-ink">Bebidas típicas</h3>
-        <p class="mt-2 text-[12px] uppercase tracking-widest text-inkFaint font-bold">Quentão, vinho quente, chocolate quente e bebidas que combinam com combos</p>
-      </div>
-    </article>
-
-    <article class="recipe-card glass-soft rounded-[24px] overflow-hidden">
-      <div class="aspect-[16/10] overflow-hidden img-bg">
-        <img src="./assets/junina/top-vendidos-card-fast.webp" class="img-cover" alt="Top 10" loading="lazy" decoding="async" width="640" height="427">
-      </div>
-      <div class="p-5">
-        <h3 class="serif text-[20px] leading-tight text-ink">Receitas rápidas pra começar</h3>
-        <p class="mt-2 text-[12px] uppercase tracking-widest text-sage font-bold">Opções simples pra testar sem gastar muito e sem produção gigante</p>
-      </div>
-    </article>
-
-    <article class="rounded-[24px] overflow-hidden bg-forestDeep text-cream relative sm:col-span-1 lg:col-span-1 flex items-center justify-center p-8 min-h-[260px] shadow-xl">
-      <div class="text-center relative z-10">
-        <div class="text-[10.5px] uppercase tracking-[.24em] text-cream/70 font-extrabold">Receba TODAS</div>
-        <h3 class="serif mt-2 text-[32px] leading-[1.05]">
-          +150 <span class="serif-i text-gold">receitas</span> testadas
-        </h3>
-        <div class="flex justify-center mt-8"> 
-          <a href="#price" class="btn-gold inline-flex items-center gap-2 px-6 py-4 text-[12px]">
-            QUERO ACESSAR O CARDÁPIO
-          </a>
-        </div>
-      </div>
-      <svg class="absolute top-4 right-4 opacity-15" width="80" height="80" viewBox="0 0 100 100" fill="none">
-        <circle cx="50" cy="50" r="45" stroke="#FFB546" stroke-width="1.5"/>
-        <circle cx="50" cy="50" r="30" stroke="#FFB546" stroke-width="1.5"/>
-      </svg>
-    </article>
-  </div>
-</section>
-
-<section id="autora" class="bg-paper py-28 sm:py-40 border-b hairline">
-  <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-
- 
-
-    <div class="lg:col-span-7">
-      <h2 class="serif mt-4 text-[32px] sm:text-[32px] leading-[1.04] tracking-tight text-ink">
-        A Aline descobriu que o problema sempre foi vender errado
-      </h2>
-
-      <p class="mt-7 text-inkSoft text-center text-[16px] leading-relaxed font-medium">
-        Por muito tempo a Aline achou que bastava cozinhar bem. Mas na hora de vender vinham as travas: medo de errar o preço, vergonha de cobrar, parente pedindo fiado e o pavor de gastar com ingrediente e não vender.
-      </p>
-      <p class="mt-4 text-center text-inkSoft text-[16px] leading-relaxed font-medium">
-        A virada veio quando ela parou de cozinhar primeiro e vender depois. Passou a calcular o preço antes, divulgar no WhatsApp e abrir encomenda antes de ligar o fogão. A cozinha era a mesma. O que mudou foi o método.
-      </p>
-      <p class="mt-4 text-inkSoft text-center text-[16px] leading-relaxed font-medium">
-        Hoje ela te entrega tudo pronto no app: as +150 receitas, o preço de cada uma já calculado e os roteiros pra você copiar, colar no WhatsApp e vender nas festinhas da sua cidade.
-      </p>
-   <div class="lg:col-span-5 mt-6 relative">
-      <div class="aspect-[3/4] rounded-[28px] overflow-hidden shadow-xl img-bg">
-        <img src="./assets/junina/expert-img-fast.webp" class="img-cover" alt="Aline Souza" loading="lazy" decoding="async" width="720" height="720">
-      </div>
-     
-    </div>
-    
-
-      <div class="mt-8 grid grid-cols-3 gap-3 text-center">
-        <div class="rounded-2xl border hairline bg-white py-5">
-          <div class="serif text-[32px] leading-none text-ink">150+</div>
-          <div class="text-[10px] uppercase tracking-widest text-inkFaint mt-2 font-bold">receitas juninas</div>
-        </div>
-        <div class="rounded-2xl border hairline bg-white py-5">
-          <div class="serif text-[32px] leading-none text-ink">7</div>
-          <div class="text-[10px] uppercase tracking-widest text-inkFaint mt-2 font-bold">bônus práticos</div>
-        </div>
-        <div class="rounded-2xl border hairline bg-white py-5">
-          <div class="serif text-[32px] leading-none text-sage">14 dias</div>
-          <div class="text-[10px] uppercase tracking-widest text-inkFaint mt-2 font-bold">de garantia</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ━━━ DEPOIMENTOS (após relatos da expert) — TÉCNICA + COMUNIDADE ━━━ -->
-<section class="fbp-section bg-cream py-28 sm:py-36 border-b hairline overflow-hidden">
-  <div class="max-w-3xl mx-auto px-6 text-center mb-12">
-   
-    <h2 class="serif mt-4 text-[32px] sm:text-[40px] leading-[1.04] tracking-tight text-ink">
-      O que muda quando você para de tentar vender no improviso
-    </h2>
-     <p class="mt-5 text-inkSoft text-[16px] leading-relaxed max-w-xl mx-auto font-medium">
-      Comentários de quem saiu do “tenho vontade” e começou a agir com método
-    </p>
-  </div>
-
-  <div class="w-full">
-    <div class="carousel-wrap">
-      <button class="car-arrow prev" aria-label="Anterior">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="car-arrow next" aria-label="Próximo">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="h-scroll">
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>47</span>
@@ -984,16 +981,17 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-renata-cardoso.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Renata Cardoso</span><span class="fbp-meta">· 2 h</span></div>
-                <div class="fbp-text">Eu vivia salvando receita e nunca fazia nada. Com o material eu escolhi uma receita só, calculei o preço e postei no status. Foi a primeira vez que senti que dava pra começar sem me desesperar.</div>
+                <div class="fbp-head"><span class="fbp-name">Renata Cardoso</span><span class="fbp-meta">&middot; 2 h</span></div>
+                <div class="fbp-text">Eu vivia salvando receita e nunca fazia nada. Com o material eu escolhi uma receita s&oacute;, calculei o pre&ccedil;o e postei no status. Foi a primeira vez que senti que dava pra come&ccedil;ar sem me desesperar.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-blue" aria-label="Avatar com iniciais">EC</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Elaine Costa</span><span class="fbp-meta">· 1 h</span></div>
-                <div class="fbp-text">Também sou dessas que salvava tudo e nunca começava. O que me ajudou foi escolher uma receita só.</div>
+                <div class="fbp-head"><span class="fbp-name">Elaine Costa</span><span class="fbp-meta">&middot; 1 h</span></div>
+                <div class="fbp-text">Tamb&eacute;m sou dessas que salvava tudo e nunca come&ccedil;ava. O que me ajudou foi escolher uma receita s&oacute;.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
                 <div class="fbp-expert-like" aria-label="Curtido"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></div>
               </div>
@@ -1001,18 +999,15 @@
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Camila Ferreira</span><span class="fbp-meta">· 4 h</span></div>
+                <div class="fbp-head"><span class="fbp-name">Camila Ferreira</span><span class="fbp-meta">&middot; 4 h</span></div>
                 <div class="fbp-text">Eu achava que precisava comprar um monte de coisa antes. Comecei com o que tinha em casa e fiz poucos pedidos. Isso tirou muito meu medo.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>89</span>
@@ -1024,34 +1019,33 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-fabiana-castro.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Fabiana Castro</span><span class="fbp-meta">· 5 h</span></div>
-                <div class="fbp-text">Eu não sabia como anunciar sem parecer insistente. Peguei um modelo de status, troquei o sabor e postei em menos de cinco minutos.</div>
+                <div class="fbp-head"><span class="fbp-name">Fabiana Castro</span><span class="fbp-meta">&middot; 5 h</span></div>
+                <div class="fbp-text">Eu n&atilde;o sabia como anunciar sem parecer insistente. Peguei um modelo de status, troquei o sabor e postei em menos de cinco minutos.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 3 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Fabiana, é exatamente essa a ideia: você não precisa inventar texto do zero pra começar.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 3 h</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">Fabiana, &eacute; exatamente essa a ideia: voc&ecirc; n&atilde;o precisa inventar texto do zero pra come&ccedil;ar.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-rose" aria-label="Avatar com iniciais">BL</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Bruna Lima</span><span class="fbp-meta">· 6 h</span></div>
-                <div class="fbp-text">Eu só mudei a forma de escrever no WhatsApp e já parei de parecer que estava pedindo favor. Ficou muito mais profissional.</div>
+                <div class="fbp-head"><span class="fbp-name">Bruna Lima</span><span class="fbp-meta">&middot; 6 h</span></div>
+                <div class="fbp-text">Eu s&oacute; mudei a forma de escrever no WhatsApp e j&aacute; parei de parecer que estava pedindo favor. Ficou muito mais profissional.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>156</span>
@@ -1063,34 +1057,33 @@
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Juliana Almeida</span><span class="fbp-meta">· 1 h</span></div>
-                <div class="fbp-text">Eu achava que precisava comprar um monte de coisa antes. Comecei com uma receita, calculei o preço e abri poucos horários de entrega.</div>
+                <div class="fbp-head"><span class="fbp-name">Juliana Almeida</span><span class="fbp-meta">&middot; 1 h</span></div>
+                <div class="fbp-text">Eu achava que precisava comprar um monte de coisa antes. Comecei com uma receita, calculei o pre&ccedil;o e abri poucos hor&aacute;rios de entrega.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 30 min ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Ju, perfeito. Começar pequeno é melhor do que ficar parada esperando o cenário perfeito.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 30 min</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">Ju, perfeito. Come&ccedil;ar pequeno &eacute; melhor do que ficar parada esperando o cen&aacute;rio perfeito.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-silhouette"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg></div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Márcia Teixeira</span><span class="fbp-meta">· 2 h</span></div>
-                <div class="fbp-text">O app me mostrou que eu estava esquecendo embalagem e gás. Eu nunca colocava isso na conta.</div>
+                <div class="fbp-head"><span class="fbp-name">M&aacute;rcia Teixeira</span><span class="fbp-meta">&middot; 2 h</span></div>
+                <div class="fbp-text">O app me mostrou que eu estava esquecendo embalagem e g&aacute;s. Eu nunca colocava isso na conta.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
         <article class="fbp-card">
           <div class="fbp-top">
             <span class="fbp-top-item likes"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg>98</span>
@@ -1102,196 +1095,68 @@
             <div class="fbp-c">
               <img class="fbp-avatar" src="./assets/junina/avatares/avatar-fabiana-castro.webp" alt="" loading="lazy" decoding="async" width="120" height="120">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Fabiana Castro</span><span class="fbp-meta">· 1 d</span></div>
-                <div class="fbp-text">O bônus de WhatsApp foi o que mais me ajudou. Eu tinha vergonha de escrever oferecendo, então só copiei, adaptei e postei.</div>
+                <div class="fbp-head"><span class="fbp-name">Fabiana Castro</span><span class="fbp-meta">&middot; 1 d</span></div>
+                <div class="fbp-text">O b&ocirc;nus de WhatsApp foi o que mais me ajudou. Eu tinha vergonha de escrever oferecendo, ent&atilde;o s&oacute; copiei, adaptei e postei.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span><span class="fbp-thumb liked"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-8a1 1 0 011-1h3zM7 11l4-9a2 2 0 012.5 1l-1.5 5.5h6a2 2 0 012 2.4l-1.5 7A2 2 0 0117 19H7"/></svg></span></div>
+
               </div>
             </div>
             <div class="fbp-c reply">
               <img class="fbp-avatar" src="./assets/junina/expert-img-fast.webp" alt="" loading="lazy" decoding="async" width="720" height="720">
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Aline Souza · Receitas Juninas</span><span class="fbp-meta">· 20 h ·</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
-                <div class="fbp-text">Fabiana, mensagem pronta existe pra isso: tirar o peso da sua cabeça e fazer você agir.</div>
+                <div class="fbp-head"><span class="fbp-name">Aline Souza &middot; Receitas Juninas</span><span class="fbp-meta">&middot; 20 h</span><span class="fbp-author-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Autor</span></div>
+                <div class="fbp-text">Fabiana, mensagem pronta existe pra isso: tirar o peso da sua cabe&ccedil;a e fazer voc&ecirc; agir.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
             <div class="fbp-c">
               <div class="fbp-avatar fbp-initials fbp-avatar-blue" aria-label="Avatar com iniciais">LN</div>
               <div class="fbp-body">
-                <div class="fbp-head"><span class="fbp-name">Larissa Nogueira</span><span class="fbp-meta">· 18 h</span></div>
-                <div class="fbp-text">Eu tinha vergonha de falar preço no grupo da família. Com a resposta pronta eu mandei sem ficar reescrevendo mil vezes.</div>
+                <div class="fbp-head"><span class="fbp-name">Larissa Nogueira</span><span class="fbp-meta">&middot; 18 h</span></div>
+                <div class="fbp-text">Eu tinha vergonha de falar pre&ccedil;o no grupo da fam&iacute;lia. Com a resposta pronta eu mandei sem ficar reescrevendo mil vezes.</div>
                 <div class="fbp-actions"><span class="resp">Curtir</span><span class="resp">Responder</span></div>
+
               </div>
             </div>
           </div>
-          <div class="fbp-input">
-            <span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-            <div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div>
-          </div>
+          <div class="fbp-input"><span class="fbp-cam"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div class="fbp-input-pill">Comente como Aline Souza - Receitinhas</div></div>
         </article>
-
       </div>
     </div>
   </div>
 </section>
 
-<section id="bonus" class="bg-forestDeep text-cream py-28 sm:py-40 relative overflow-hidden">
-  <svg class="absolute inset-0 w-full h-full opacity-[.06]" preserveAspectRatio="none" viewBox="0 0 1000 600" fill="none">
-    <path d="M0 100 Q250 80 500 130 T1000 100" stroke="#FFB546" stroke-width="1.5"/>
-    <path d="M0 200 Q250 170 500 230 T1000 200" stroke="#FFB546" stroke-width="1.5"/>
-    <path d="M0 300 Q250 270 500 330 T1000 300" stroke="#FFB546" stroke-width="1.5"/>
-  </svg>
 
-  <div class="max-w-6xl mx-auto px-6 relative">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="serif mt-4 text-[38px] sm:text-[50px] leading-[1.04] tracking-tight">
-        7 bônus práticos para vender com mais segurança no São João
-      </h2>
-      <p class="mt-5 text-[16px] text-cream/80 font-medium">Materiais de apoio para tirar dúvida de preço, divulgação, cobrança, compra, embalagem e planejamento.</p>
-    </div>
-
-    <div class="mt-14 grid md:grid-cols-3 gap-6">
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-planilha-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 01</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Calculadora de Preço no App</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Dentro do próprio app: você põe o custo e ele mostra na hora quanto cobrar pra lucrar, sem chute e sem vender barato por medo.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 67,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-whatsapp-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 02</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Roteiros Anti-Vergonha de WhatsApp</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Mensagens prontas pra status, grupo, lista de transmissão e resposta individual sem parecer insistente.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 47,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-sem-fiado-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 03</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Guia "Sem Fiado, Sem Calote"</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Frases prontas pra cobrar parente folgado sem briga. Pra você nunca mais virar ONG de festa junina no seu bairro.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 37,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-atacadao-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 04</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Lista do Atacadão de Junho</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Uma lista organizada para comprar o necessário com mais clareza, sem ficar tentando calcular tudo de cabeça no corredor.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 47,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-embalagem-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 05</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Manual da Embalagem Certa</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Qual ml/tamanho usar pra cada receita, onde comprar mais barato e quanto cobra a mais com embalagem bonita. Fim da paralisia na loja.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 37,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-calendario-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 06</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Calendário do São João Lucrativo</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Semana por semana até 30/06: o que produzir, quando divulgar, quando entregar. Pra você não chegar em junho perdida e sem plano.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 57,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-
-      <article class="rounded-[24px] bg-white/5 border border-white/10 backdrop-blur p-6">
-        <div class="aspect-video rounded-2xl overflow-hidden mb-5 img-bg">
-          <img src="./assets/junina/bonus-vitrine-whatsapp-card-fast.webp" class="img-cover opacity-90" alt="" loading="lazy" decoding="async" width="720" height="480">
-        </div>
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Bônus 07</div>
-        <h3 class="serif mt-2 text-[20px] leading-tight text-white">Vitrine de WhatsApp Pronta</h3>
-        <p class="mt-3 text-[13px] text-cream/70 leading-relaxed">Textos e ideias de vitrine para deixar seu WhatsApp mais organizado quando você abrir encomendas.</p>
-        <div class="mt-4 flex items-baseline gap-2">
-          <span class="strike text-cream/40 text-[14px]">R$ 67,00</span>
-          <span class="text-[#FFC857] font-bold tracking-wide text-[12px]">HOJE É GRÁTIS!</span>
-        </div>
-      </article>
-      <article class="rounded-[24px] bg-white/10 border border-white/15 backdrop-blur p-6 flex flex-col items-center justify-center text-center min-h-[280px]">
-        <div class="text-[10px] uppercase tracking-[.25em] text-gold font-bold">Valor total dos bônus</div>
-        <div class="serif mt-5 text-[38px] leading-none text-cream/45 line-through">R$ 359</div>
-        <div class="serif mt-4 text-[30px] leading-none text-gold">Hoje é grátis</div>
-        <p class="mt-4 text-[13px] text-cream/75 leading-relaxed max-w-[240px]">7 bônus inclusos para você começar com direção, preço e divulgação mais claros.</p>
-      </article>
-      
-    </div>
-  </div>
-</section>
 
 <section class="bg-cream py-28 sm:py-40 border-y hairline">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="serif mt-4 text-[36px] sm:text-[48px] leading-[1.04] tracking-tight text-ink">
-        Antes e depois de vender com método da festa junina lucrativa
-      </h2>
+      <h2 class="serif mt-4 text-[36px] sm:text-[48px] leading-[1.04] tracking-tight text-ink">Ria se quiser… mas tem gente tirando dinheiro em junho com comida pior que a sua</h2>
     </div>
-
     <div class="grid md:grid-cols-2 gap-8">
       <div class="rounded-[28px] bg-white border hairline p-8 sm:p-10 shadow-sm">
-        <h3 class="serif mt-2 text-[28px] sm:text-[32px] leading-tight text-ink">
-          Antes de usar <span class="serif-i text-[#C44A3C]">o método</span>
-        </h3>
+        <h3 class="serif mt-2 text-[28px] sm:text-[32px] leading-tight text-ink">Antes de usar <span class="serif-i text-[#C44A3C]">o m&eacute;todo</span></h3>
         <ul class="cross mt-6 text-[14.5px] text-inkSoft space-y-2">
-          <li>Travava no atacadão fazendo conta de cabeça</li>
-          <li>Dava um branco e cobrava qualquer preço</li>
-          <li>Ignorava cliente no WhatsApp suando frio</li>
-          <li>Tinha vergonha de botar plaquinha no portão</li>
-          <li>Vendia fiado pro parente e tomava calote</li>
-          <li>Trabalhava de madrugada e não via lucro</li>
-          <li>Acabava distribuindo de graça pros vizinhos</li>
-          <li>Via a oportunidade passar e ficava parada de novo</li>
+          <li>Você não sabe qual receita escolher</li>
+          <li>Fica travada no preço</li>
+          <li>Tem vergonha de divulgar</li>
+          <li>Aceita fiado para não parecer grossa</li>
+          <li>Faz comida só para família</li>
+          <li>Vê junho passar e continua sem seu próprio dinheiro</li>
         </ul>
       </div>
-
       <div class="rounded-[28px] bg-paper border hairline p-8 sm:p-10 shadow-lg relative overflow-hidden">
         <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-sage/10 blur-2xl"></div>
-        <h3 class="serif mt-2 text-[28px] sm:text-[32px] leading-tight text-ink relative">
-          Depois de usar <span class="serif-i">o método</span>
-        </h3>
+        <h3 class="serif mt-2 text-[28px] sm:text-[32px] leading-tight text-ink relative">Depois de usar <span class="serif-i">o m&eacute;todo</span></h3>
         <ul class="check mt-6 text-[14.5px] text-ink space-y-2 relative">
-          <li>Chega no atacadão com lista pronta e sai com tudo certo</li>
-          <li>Sabe o preço EXATO de cada pote (sem fazer conta)</li>
-          <li>Responde cliente em 30 segundos (copia, cola, manda)</li>
-          <li>Vende invisível pelo WhatsApp (sem placa no portão)</li>
-          <li>Recebe o dinheiro ANTES de cozinhar (encomenda)</li>
-          <li>Sabe negar fiado sem perder cliente nem amizade</li>
-          <li>Vê a renda entrar e respira aliviada no fim do mês</li>
-          <li>Prova pra si mesma que é capaz e já pensa no próximo São João</li>
+          <li>Você monta um cardápio junino simples</li>
+          <li>Sabe quanto cobrar</li>
+          <li>Divulga com mensagem pronta</li>
+          <li>Vende pelo WhatsApp</li>
+          <li>Aproveita as festinhas da cidade</li>
+          <li>Recebe pedidos sem depender de adivinhação</li>
+          <li>Faz renda extra com uma comida que você já sabe fazer</li>
         </ul>
       </div>
     </div>
@@ -1781,92 +1646,45 @@
 
 <section id="price" class="bg-paper py-32 sm:py-44 border-y hairline">
   <div class="max-w-4xl mx-auto px-6 text-center">
-    <p class="text-[12px] uppercase tracking-[.25em] text-sage font-bold">Acesso vitalício</p>
-    <h2 class="serif mt-4 text-[36px] sm:text-[48px] leading-[1.04] tracking-tight text-ink">
-      Tudo o que você precisa pra começar a vender comida junina com mais segurança
-    </h2>
-    <p class="mt-5 max-w-2xl mx-auto text-inkSoft text-[15px] sm:text-[17px] leading-relaxed font-medium">
-      Pagamento único. Acesso vitalício. Material liberado em poucos minutos no seu e-mail para você começar escolhendo sua primeira receita ainda hoje.
-    </p>
-
+    <p class="text-[12px] uppercase tracking-[.25em] text-sage font-bold">Acesso vital&iacute;cio</p>
+    <h2 class="serif mt-4 text-[36px] sm:text-[48px] leading-[1.04] tracking-tight text-ink">Comece hoje sua temporada de vendas juninas</h2>
+    <p class="mt-5 max-w-2xl mx-auto text-inkSoft text-[15px] sm:text-[17px] leading-relaxed font-medium">Junho passa rápido. Cada festa, cada arraiá, cada reunião e cada grupo de WhatsApp pode virar uma chance de venda para quem sabe o que oferecer.</p>
     <div class="mt-12 rounded-[28px] bg-white border hairline shadow-sm overflow-hidden text-left">
-      <div class="px-6 py-5 border-b hairline bg-cream/70">
-        <div class="text-[10.5px] uppercase tracking-[.24em] text-sage font-extrabold">Tudo o que você leva:</div>
-      </div>
+      <div class="px-6 py-5 border-b hairline bg-cream/70"><div class="text-[10.5px] uppercase tracking-[.24em] text-sage font-extrabold">Tudo o que voc&ecirc; leva:</div></div>
       <div class="offer-stack px-5 sm:px-6 py-3">
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">+150 receitas testadas de Festa Junina</span><span class="font-bold text-ink">R$ 197,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus 01 · Calculadora de Preço no App</span><span class="font-bold text-ink">R$ 67,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus 02 · Roteiros Anti-Vergonha de WhatsApp</span><span class="font-bold text-ink">R$ 47,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus 03 · Guia Sem Fiado, Sem Calote</span><span class="font-bold text-ink">R$ 37,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus 04 · Lista do Atacadão de Junho</span><span class="font-bold text-ink">R$ 47,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus 05 · Manual da Embalagem Certa</span><span class="font-bold text-ink">R$ 37,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus 06 · Calendário do São João Lucrativo</span><span class="font-bold text-ink">R$ 57,00</span></div>
-        <div class="flex items-center justify-between gap-4 py-3 text-[14px]"><span class="font-medium text-ink">Bônus 07 · Vitrine de WhatsApp Pronta</span><span class="font-bold text-ink">R$ 67,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">App com +150 receitas típicas</span><span class="font-bold text-ink">R$ 197,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Cardápios juninos prontos</span><span class="font-bold text-ink">R$ 67,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Calculadora de preço e lucro</span><span class="font-bold text-ink">R$ 67,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Mensagens prontas para WhatsApp</span><span class="font-bold text-ink">R$ 47,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Roteiros para vender nas festinhas da cidade</span><span class="font-bold text-ink">R$ 47,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Guia de embalagem e porção</span><span class="font-bold text-ink">R$ 37,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Bônus Sem Fiado, Sem Calote</span><span class="font-bold text-ink">R$ 37,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">Acesso vitalício</span><span class="font-bold text-ink">R$ 57,00</span></div>
+        <div class="flex items-center justify-between gap-4 py-3 border-b hairline text-[14px]"><span class="font-medium text-ink">14 dias de garantia</span><span class="font-bold text-ink">Incluso</span></div>
       </div>
-      <div class="offer-stack-total px-5 sm:px-6 py-5 bg-paper border-t hairline flex items-center justify-between gap-4">
-        <span class="font-bold text-ink">Valor total</span>
-        <span class="serif text-[28px] text-ink">R$ 556,00</span>
-      </div>
+      <div class="offer-stack-total px-5 sm:px-6 py-5 bg-paper border-t hairline flex items-center justify-between gap-4"><span class="font-bold text-ink">Valor total</span><span class="serif text-[28px] text-ink">R$ 556,00</span></div>
     </div>
-
-    <div class="mt-8 text-center">
-      <p class="text-[12px] uppercase tracking-[.22em] text-inkFaint font-bold">Mas hoje, você leva tudo por apenas</p>
-    </div>
-
+    <div class="mt-8 text-center"><p class="text-[12px] uppercase tracking-[.22em] text-inkFaint font-bold">Mas hoje, voc&ecirc; leva tudo por apenas</p></div>
     <div class="mt-6 rounded-[32px] bg-forestDeep text-cream p-8 sm:p-12 relative overflow-hidden shadow-2xl">
-      <div class="absolute top-0 right-0 bg-sage text-white px-5 py-2 rounded-bl-2xl text-[10.5px] tracking-[.18em] font-extrabold uppercase shadow-lg">Acesso vitalício</div>
-      <svg class="absolute -top-12 -right-12 opacity-10" width="200" height="200" viewBox="0 0 100 100" fill="none">
-        <circle cx="50" cy="50" r="48" stroke="#FFB546" stroke-width=".6"/>
-        <circle cx="50" cy="50" r="38" stroke="#FFB546" stroke-width=".6"/>
-        <circle cx="50" cy="50" r="28" stroke="#FFB546" stroke-width=".6"/>
-      </svg>
-
+      <div class="absolute top-0 right-0 bg-sage text-white px-5 py-2 rounded-bl-2xl text-[10.5px] tracking-[.18em] font-extrabold uppercase shadow-lg">Acesso vital&iacute;cio</div>
+      <svg class="absolute -top-12 -right-12 opacity-10" width="200" height="200" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="48" stroke="#FFB546" stroke-width=".6"/><circle cx="50" cy="50" r="38" stroke="#FFB546" stroke-width=".6"/><circle cx="50" cy="50" r="28" stroke="#FFB546" stroke-width=".6"/></svg>
       <div class="grid sm:grid-cols-5 gap-8 items-center pt-4 relative z-10 text-left">
-        <div class="sm:col-span-3">
-          <div class="text-[12px] font-extrabold text-[#FFB546] uppercase tracking-[.22em]">Pagamento único</div>
-          <div class="flex items-baseline gap-2 mt-3">
-            <span class="strike text-[20px] font-semibold text-cream/70">R$ 129</span>
-            <span class="text-[11px] tracking-widest font-extrabold text-white bg-white/10 border border-white/15 px-2 py-1 rounded-md">-70%</span>
-          </div>
-          <div class="flex items-start gap-2 mt-3">
-            <span class="text-[36px] font-extrabold text-cream mt-3">R$</span>
-            <span class="serif text-[120px] sm:text-[148px] leading-none tracking-tighter text-[#F7F7F7]">37<span class="text-[44px] sm:text-[54px]">, 90</span></span>
-          </div>
-          <p class="text-cream/80 text-[14px] font-medium mt-1">
-            Menos do que uma compra errada no atacadão. Menos do que uma panela de canjica encalhada.
-          </p>
-        </div>
-
-        <div class="sm:col-span-2">
-          <ul class="space-y-3 text-[13.5px] text-cream/90">
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>Acesso imediato</span></li>
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>Pagamento único</span></li>
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>+150 receitas</span></li>
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>Calculadora de preço no app</span></li>
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>Roteiros de WhatsApp</span></li>
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>7 bônus inclusos</span></li>
-            <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">✓</span><span>14 dias de garantia</span></li>
-          </ul>
-        </div>
+        <div class="sm:col-span-3"><div class="text-[12px] font-extrabold text-[#FFB546] uppercase tracking-[.22em]">Pagamento &uacute;nico</div><div class="flex items-baseline gap-2 mt-3"><span class="strike text-[20px] font-semibold text-cream/70">R$ 129</span><span class="text-[11px] tracking-widest font-extrabold text-white bg-white/10 border border-white/15 px-2 py-1 rounded-md">-70%</span></div><div class="flex items-start gap-2 mt-3"><span class="text-[36px] font-extrabold text-cream mt-3">R$</span><span class="serif text-[120px] sm:text-[148px] leading-none tracking-tighter text-[#F7F7F7]">37<span class="text-[44px] sm:text-[54px]">, 90</span></span></div><p class="text-cream/80 text-[14px] font-medium mt-1">Menos do que uma compra errada no atacad&atilde;o. Menos do que deixar junho passar sem tentar vender.</p></div>
+        <div class="sm:col-span-2"><ul class="space-y-3 text-[13.5px] text-cream/90">
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>App com +150 receitas típicas</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Cardápios juninos prontos</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Calculadora de preço e lucro</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Mensagens prontas para WhatsApp</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Roteiros para vender nas festinhas da cidade</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Guia de embalagem e porção</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Bônus Sem Fiado, Sem Calote</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>Acesso vitalício</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-5 h-5 rounded-full bg-sage/20 text-[#FFB546] grid place-items-center text-[11px] font-black">&#10003;</span><span>14 dias de garantia</span></li>
+        </ul></div>
       </div>
-
-      <a href="https://pay.hotmart.com/C105858073N?checkoutMode=10" class="btn-gold relative z-10 mt-10 inline-flex w-full items-center justify-center gap-2 py-6 px-10 text-[15px]">
-        QUERO LUCRAR NA FESTA JUNINA
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-
-      <p class="mt-6 text-[11.5px] tracking-[.18em] uppercase text-[#FFB546] font-bold flex items-center justify-center gap-3 relative z-10">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#FFB546]"></span>
-        <span id="offer-expiry-text">OFERTA ESPECIAL DE SÃO JOÃO</span>
-        <span class="w-1.5 h-1.5 rounded-full bg-[#FFB546]"></span>
-      </p>
-
-      <div class="mt-6 flex flex-wrap justify-center items-center gap-2 relative z-10">
-        <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">PIX</span>
-        <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">VISA</span>
-        <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">MASTER</span>
-        <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">ELO</span>
-      </div>
+      <a href="https://pay.hotmart.com/C105858073N?checkoutMode=10" class="btn-gold relative z-10 mt-10 inline-flex w-full items-center justify-center gap-2 py-6 px-10 text-[15px]">QUERO COMEÇAR A VENDER HOJE<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="mt-6 text-[11.5px] tracking-[.18em] uppercase text-[#FFB546] font-bold flex items-center justify-center gap-3 relative z-10"><span class="w-1.5 h-1.5 rounded-full bg-[#FFB546]"></span><span id="offer-expiry-text">OFERTA ESPECIAL DE S&#195;O JO&#195;O</span><span class="w-1.5 h-1.5 rounded-full bg-[#FFB546]"></span></p>
+      <div class="mt-6 flex flex-wrap justify-center items-center gap-2 relative z-10"><span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">PIX</span><span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">VISA</span><span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">MASTER</span><span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10.5px] tracking-widest font-semibold text-cream/70">ELO</span></div>
     </div>
   </div>
 </section>
@@ -1874,178 +1692,71 @@
 <section class="bg-cream py-24 sm:py-32 border-b hairline">
   <div class="max-w-4xl mx-auto px-6">
     <div class="rounded-[28px] bg-white border hairline p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8 shadow-sm">
-      <div class="relative z-10 shrink-0 w-28 h-28 rounded-full grid place-items-center text-white relative" style="background:linear-gradient(180deg, #FF7A2A, #EA5D1A);box-shadow:0 14px 36px -8px rgba(234,93,26,.5)">
-        <div class="absolute inset-2 rounded-full border-2 border-white/40"></div>
-        <div class="text-center">
-          <img src="./assets/junina/garantia.webp" alt="garantia" class="rounded-2xl" srcset="">
-        </div>
-      </div>
+      <div class="relative z-10 shrink-0 w-28 h-28 rounded-full grid place-items-center text-white relative" style="background:linear-gradient(180deg, #FF7A2A, #EA5D1A);box-shadow:0 14px 36px -8px rgba(234,93,26,.5)"><div class="absolute inset-2 rounded-full border-2 border-white/40"></div><div class="text-center"><img src="./assets/junina/garantia.webp" alt="garantia" class="rounded-2xl" srcset=""></div></div>
       <div class="text-center sm:text-left">
         <p class="text-[12px] uppercase tracking-[.25em] text-sage font-bold">Garantia Incondicional</p>
-        <h3 class="serif mt-2 text-[24px] sm:text-[28px] leading-tight text-ink">
-          Teste sem risco por 14 dias.
-        </h3>
-        <p class="mt-4 text-inkSoft text-[15px] leading-relaxed font-medium">
-          Acesse o material, veja as receitas, abra a planilha, leia os roteiros de WhatsApp e confira se o Método Junino faz sentido pra você. Se você sentir que o material não vai te ajudar, basta pedir reembolso dentro de 14 dias e devolvemos 100% do seu dinheiro. Sem discussão. Sem letra miúda. Sem constrangimento.
-        </p>
+        <h3 class="serif mt-2 text-[24px] sm:text-[28px] leading-tight text-ink">Teste por 14 dias. Se não for para você, seu dinheiro volta</h3>
+        <p class="mt-4 text-inkSoft text-[15px] leading-relaxed font-medium">Entre no app, veja as receitas, monte seu cardápio, confira os preços, leia as mensagens prontas e veja se isso faz sentido para sua realidade.</p>
+        <p class="mt-4 text-inkSoft text-[15px] leading-relaxed font-medium">Se achar que o Método Junino não vai te ajudar a vender, é só pedir reembolso dentro de 14 dias.</p>
+        <p class="mt-4 text-inkSoft text-[15px] leading-relaxed font-medium">Sem discussão. Sem constrangimento. Sem letra miúda.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-paper py-28 sm:py-40">
-  <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-12 max-w-2xl mx-auto w-full">
-      
-      <div class="text-center mb-10">
-        <p class="text-[12px] uppercase tracking-[.25em] text-inkFaint font-bold">Próximo Passo</p>
-        <h2 class="serif mt-3 text-[36px] sm:text-[44px] leading-[1.04] tracking-tight text-ink">
-          Como vou receber <span class="serif-i">o material?</span>
-        </h2>
-      </div>
 
-      <div class="rounded-[28px] bg-white border hairline p-8 sm:p-10 shadow-sm">
-        <ul class="check text-[15px] space-y-2">
-          <li>Recebe acesso no <strong>e-mail</strong> logo após a compra</li>
-          <li>Pode abrir no <strong>celular, computador ou tablet</strong></li>
-          <li>Leva as <strong>+150 receitas</strong> com rendimento e preparo</li>
-          <li>Tem a <strong>calculadora de preço no app</strong> e os <strong>roteiros de WhatsApp</strong> pra copiar e colar</li>
-          <li>Pode <strong>imprimir</strong> ou consultar direto na tela</li>
-          <li>O acesso é <strong>vitalício</strong>, sem mensalidade</li>
-          <li>Se tiver problema de acesso, o <strong>suporte ajuda você</strong></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="faq" class="bg-cream py-28 sm:py-40 border-y hairline">
   <div class="max-w-3xl mx-auto px-6">
-    <div class="text-center">
-      <h2 class="serif mt-3 text-[36px] sm:text-[44px] leading-[1.04] tracking-tight text-ink">
-        <span class="serif-i">Dúvidas</span> <span>frequentes</span>
-      </h2>
-    </div>
-
+    <div class="text-center"><h2 class="serif mt-3 text-[36px] sm:text-[44px] leading-[1.04] tracking-tight text-ink">Dúvidas de quem quer vender, mas ainda está com medo</h2></div>
     <div class="mt-12 space-y-3">
-
       <details class="glass-soft rounded-2xl p-5 group">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Já tentei vender ano passado e levei prejuízo. Como vai ser diferente?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Porque provavelmente você cozinhou primeiro e tentou vender depois. Aqui a lógica é outra: você escolhe a receita, calcula o preço, divulga, abre encomendas e só depois produz com mais segurança. Isso não garante venda automática, mas reduz muito o risco de fazer comida no escuro e ficar com tudo parado.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Eu nunca vendi comida. Serve para mim?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Serve. O metodo foi feito para quem quer comecar simples, usando receitas tipicas, mensagens prontas e um plano direto para vender em junho.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Eu tenho vergonha de vender. Isso serve pra mim?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Sim. Na verdade, serve principalmente pra você. Você não precisa começar colocando placa no portão nem oferecendo cara a cara. O método te entrega roteiros prontos pra postar no WhatsApp, responder interessados e divulgar sem parecer desesperada ou insistente.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Eu sou ruim de matemática. Vou conseguir calcular?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Vai conseguir. O app ajuda no calculo: voce informa os custos e usa a orientacao para chegar num preco com mais seguranca.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Meu bairro é simples. Será que as pessoas vão pagar?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          O método não manda você cobrar preço absurdo. A ideia é calcular um preço possível, escolher receitas com boa saída e vender no formato certo pra sua realidade: unidade, combo, encomenda, pote, fatia ou porção. Você não precisa vender pra todo mundo. Precisa vender pra quem valoriza comida pronta, gostosa e típica na época certa.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Meu bairro é simples. Será que o povo compra?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Compra sim, quando a oferta combina com a realidade do lugar. A ideia e vender comida junina em formatos simples: pote, fatia, unidade, combo ou porcao.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Eu sou ruim de matemática. Vou conseguir calcular o preço?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Vai. O app faz isso por você. Não precisa virar especialista em conta nem precificação: você só informa quanto gastou e ele mostra o preço certo pra você não vender no prejuízo.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Tenho vergonha de postar no WhatsApp. E agora?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Voce usa os roteiros prontos para postar sem parecer desesperada. E so copiar, adaptar para sua receita e mandar.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Preciso de panela industrial ou utensílio caro?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Não. A ideia é começar com o que você já tem: fogão comum, panela normal, liquidificador e organização. Você só pensa em estrutura maior depois que validar suas vendas.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Preciso de panela grande ou equipamento caro?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Nao. A proposta e comecar com fogao comum, panela normal e organizacao, sem investir em estrutura antes de vender.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Como cobro de parente sem brigar?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Você recebe o bônus Sem Fiado, Sem Calote, com frases prontas pra pedir pagamento antecipado, sinal ou confirmação de encomenda. Assim você consegue cobrar com educação, sem brigar e sem virar “ONG de Festa Junina” pra parente e vizinho folgado.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Como faço para vender nas festinhas da cidade?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Use as oportunidades de junho: escola, igreja, rua, familia, grupo de maes, bairro e eventos da cidade. O metodo mostra como oferecer e organizar pedidos.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Quanto tempo até eu fazer minha primeira venda?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Depende da sua execução, da sua divulgação e da procura na sua região. Mas você pode começar no mesmo dia: escolher uma receita, calcular o preço, postar no WhatsApp e abrir encomendas. O método foi feito pra tirar você da enrolação e colocar uma ação simples na sua frente.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">Como cobro sem aceitar fiado?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Use o bonus Sem Fiado, Sem Calote para pedir sinal, pagamento antecipado ou confirmacao sem brigar e sem parecer grossa.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">O acesso é por quanto tempo?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          O acesso é vitalício. Você paga uma vez só e pode usar nesse São João e nos próximos também.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">O pagamento é mensal?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Nao. O pagamento e unico e o acesso e vitalicio.</p>
       </details>
-
       <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">Vou receber pelo WhatsApp ou e-mail?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Após a compra, você recebe as instruções de acesso no e-mail cadastrado. Também pode receber informações pelo WhatsApp, dependendo dos dados preenchidos no checkout.
-        </p>
+        <summary class="flex items-center justify-between gap-4"><span class="font-bold text-ink text-[15.5px]">E se eu comprar e não gostar?</span><svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">Voce tem 14 dias de garantia. Se acessar e achar que nao faz sentido para voce, pode pedir reembolso dentro do prazo.</p>
       </details>
-
-      <details class="glass-soft rounded-2xl p-5">
-        <summary class="flex items-center justify-between gap-4">
-          <span class="font-bold text-ink text-[15.5px]">E se eu comprar e não gostar?</span>
-          <svg class="chev shrink-0 text-inkFaint" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="mt-3 text-inkSoft text-[14.5px] leading-relaxed font-medium">
-          Você tem 14 dias de garantia. Se acessar e sentir que o material não é pra você, basta pedir reembolso dentro do prazo e devolvemos 100% do valor pago.
-        </p>
-      </details>
-
     </div>
   </div>
 </section>
 
 <section class="bg-forestDeep text-cream py-24 sm:py-32">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="serif text-[36px] sm:text-[52px] leading-[1.04] tracking-tight">
-      Junho vai passar de qualquer jeito
-    </h2>
-    <p class="mt-6 text-[16px] sm:text-[18px] text-cream/90 font-medium">
-      Ele vai passar com você vendo as outras venderem… ou com você fazendo uma renda que ajuda nas contas e é só sua. Você não precisa começar perfeita. Precisa começar com direção.
-    </p>
-    <a href="#price" class="btn-gold mt-10 inline-flex items-center gap-2 px-9 py-5 text-[14px]">
-      QUERO ACESSAR O MÉTODO JUNINO AGORA
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <p class="mt-5 text-[12px] text-cream/60 tracking-wider uppercase font-bold">Pagamento único · Acesso vitalício · 14 dias de garantia</p>
+    <h2 class="serif text-[36px] sm:text-[52px] leading-[1.04] tracking-tight">Junho vai passar. A pergunta é se ele vai deixar só lembrança… ou dinheiro no seu bolso</h2>
+    <p class="mt-6 text-[16px] sm:text-[18px] text-cream/90 font-medium">Você pode passar mais um São João vendo as outras venderem. Ou pode pegar o que você já sabe fazer na cozinha e transformar em renda extra com receitas, preços, cardápios e mensagens prontas.</p>
+    <p class="mt-6 text-[16px] sm:text-[18px] text-cream/90 font-medium">Você não precisa começar perfeita. Precisa começar.</p>
+    <a href="#price" class="btn-gold mt-10 inline-flex items-center gap-2 px-9 py-5 text-[14px]">QUERO COMEÇAR A VENDER NO SÃO JOÃO<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p class="mt-5 text-[12px] text-cream/60 tracking-wider uppercase font-bold">Pagamento &uacute;nico &middot; Acesso vital&iacute;cio &middot; 14 dias de garantia</p>
   </div>
 </section>
 
